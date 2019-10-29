@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/lib/@mauron85_react-native-background-geolocation.iml" filepath="$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/lib/@mauron85_react-native-background-geolocation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/common/@mauron85_react-native-background-geolocation-common.iml" filepath="$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/common/@mauron85_react-native-background-geolocation-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/expo-app-loader-provider/android/expo-app-loader-provider.iml" filepath="$PROJECT_DIR$/../node_modules/expo-app-loader-provider/android/expo-app-loader-provider.iml" />
@@ -16,6 +14,8 @@
       <module fileurl="file://$PROJECT_DIR$/../node_modules/expo-permissions/android/expo-permissions.iml" filepath="$PROJECT_DIR$/../node_modules/expo-permissions/android/expo-permissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/expo-sqlite/android/expo-sqlite.iml" filepath="$PROJECT_DIR$/../node_modules/expo-sqlite/android/expo-sqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/expo-web-browser/android/expo-web-browser.iml" filepath="$PROJECT_DIR$/../node_modules/expo-web-browser/android/expo-web-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-background-fetch/android/react-native-background-fetch.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-background-fetch/android/react-native-background-fetch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-background-geolocation/android/react-native-background-geolocation.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-background-geolocation/android/react-native-background-geolocation.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/unimodules-barcode-scanner-interface/android/unimodules-barcode-scanner-interface.iml" filepath="$PROJECT_DIR$/../node_modules/unimodules-barcode-scanner-interface/android/unimodules-barcode-scanner-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/unimodules-camera-interface/android/unimodules-camera-interface.iml" filepath="$PROJECT_DIR$/../node_modules/unimodules-camera-interface/android/unimodules-camera-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/unimodules-constants-interface/android/unimodules-constants-interface.iml" filepath="$PROJECT_DIR$/../node_modules/unimodules-constants-interface/android/unimodules-constants-interface.iml" />

@@ -6,6 +6,8 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
+		353255EA718D4E4BBBEAC33C /* TSBackgroundFetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB7F04CB05642A09541A8CD /* TSBackgroundFetch.framework */; };
+		73871D802354A6F7002087F2 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73871D7F2354A6F7002087F2 /* RNBackgroundFetch+AppDelegate.m */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
 		B56386491DB9693800A0598C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56386481DB9693800A0598C /* AppDelegate.m */; };
 		B56386511DB9693800A0598C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56386501DB9693800A0598C /* Assets.xcassets */; };
@@ -18,14 +20,18 @@
 		B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047E1F3A684600E91581 /* shell-app-manifest.json */; };
 		B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047F1F3A684600E91581 /* shell-app.bundle */; };
 		EBB8117C1BFA0514F79CAF74 /* libPods-issuebuild.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A88D15726AD99E8A257BC7 /* libPods-issuebuild.a */; };
-		1BD93156B55C4D20A31A4542 /* libRCTBackgroundGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBAD653E9F342009F034074 /* libRCTBackgroundGeolocation.a */; };
+		FFB1CAE2CDD44FC5A580EA10 /* TSLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2D5A4059984D9F8A5C7161 /* TSLocationManager.framework */; };
+		345307A05D994C3BAD177D30 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88AE87217F34827BF00FE84 /* RNBackgroundFetch+AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2D5A4059984D9F8A5C7161 /* TSLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TSLocationManager.framework; path = "../node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation/TSLocationManager.framework"; sourceTree = SDKROOT; };
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-issuebuild.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issuebuild.debug.xcconfig"; path = "Pods/Target Support Files/Pods-issuebuild/Pods-issuebuild.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB7F04CB05642A09541A8CD /* TSBackgroundFetch.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TSBackgroundFetch.framework; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/TSBackgroundFetch.framework"; sourceTree = SDKROOT; };
+		73871D7F2354A6F7002087F2 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RNBackgroundFetch+AppDelegate.m"; path = "../../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-issuebuild.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issuebuild.release.xcconfig"; path = "Pods/Target Support Files/Pods-issuebuild/Pods-issuebuild.release.xcconfig"; sourceTree = "<group>"; };
 		B501732A1DC01252003445D9 /* EXShell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXShell.plist; sourceTree = "<group>"; };
-		B56386411DB9693800A0598C /* issuebuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "issuebuild.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56386411DB9693800A0598C /* issuebuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issuebuild.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56386471DB9693800A0598C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B56386481DB9693800A0598C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B56386501DB9693800A0598C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,8 +45,7 @@
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-issuebuild.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issuebuild.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F7BE40F4A66487593F6F38F /* RCTBackgroundGeolocation.xcodeproj */ = {isa = PBXFileReference; name = "RCTBackgroundGeolocation.xcodeproj"; path = "../node_modules/@mauron85/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		3BBAD653E9F342009F034074 /* libRCTBackgroundGeolocation.a */ = {isa = PBXFileReference; name = "libRCTBackgroundGeolocation.a"; path = "libRCTBackgroundGeolocation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D88AE87217F34827BF00FE84 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; name = "RNBackgroundFetch+AppDelegate.m"; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +54,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB8117C1BFA0514F79CAF74 /* libPods-issuebuild.a in Frameworks */,
-				1BD93156B55C4D20A31A4542 /* libRCTBackgroundGeolocation.a in Frameworks */,
+				353255EA718D4E4BBBEAC33C /* TSBackgroundFetch.framework in Frameworks */,
+				FFB1CAE2CDD44FC5A580EA10 /* TSLocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				C4A88D15726AD99E8A257BC7 /* libPods-issuebuild.a */,
+				5DB7F04CB05642A09541A8CD /* TSBackgroundFetch.framework */,
+				0B2D5A4059984D9F8A5C7161 /* TSLocationManager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,7 +88,6 @@
 				B56386421DB9693800A0598C /* Products */,
 				5B29BC350A332C58878A9F13 /* Pods */,
 				1A42804E64B7E9E0AB8B6799 /* Frameworks */,
-				DFF17E4761F54317A22CB7A6 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,12 +102,14 @@
 		B56386431DB9693800A0598C /* issuebuild */ = {
 			isa = PBXGroup;
 			children = (
+				73871D7F2354A6F7002087F2 /* RNBackgroundFetch+AppDelegate.m */,
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
 				B563865B1DB96A5E00A0598C /* Supporting */,
+				D88AE87217F34827BF00FE84 /* RNBackgroundFetch+AppDelegate.m */,
 			);
-			path = "issuebuild";
+			path = issuebuild;
 			sourceTree = "<group>";
 		};
 		B563865B1DB96A5E00A0598C /* Supporting */ = {
@@ -119,15 +128,6 @@
 			);
 			path = Supporting;
 			sourceTree = "<group>";
-		};
-		DFF17E4761F54317A22CB7A6 /* Libraries */ = {
-			isa = "PBXGroup";
-			children = (
-				7F7BE40F4A66487593F6F38F /* RCTBackgroundGeolocation.xcodeproj */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -149,8 +149,8 @@
 			);
 			dependencies = (
 			);
-			name = "issuebuild";
-			productName = "issuebuild";
+			name = issuebuild;
+			productName = issuebuild;
 			productReference = B56386411DB9693800A0598C /* issuebuild.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -167,6 +167,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = C8D8QTF339;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = true;
+							};
+						};
 					};
 				};
 			};
@@ -175,6 +180,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -288,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73871D802354A6F7002087F2 /* RNBackgroundFetch+AppDelegate.m in Sources */,
 				B56386611DB96A5E00A0598C /* main.m in Sources */,
 				B56386491DB9693800A0598C /* AppDelegate.m in Sources */,
+				345307A05D994C3BAD177D30 /* RNBackgroundFetch+AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,13 +414,9 @@
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/issuebuild/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.deway.sentinela";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.deway.sentinela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Debug;
 		};
@@ -424,13 +428,9 @@
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/issuebuild/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.deway.sentinela";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.deway.sentinela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Release;
 		};

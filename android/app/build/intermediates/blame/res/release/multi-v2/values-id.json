@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pedro/Documents/issueGeolocation/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-id/values-id.xml",
+            "outputFile": "/Users/dewaysoftwarehouse/Documents/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-id/values-id.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/facebook-common-5.0.1.aar/06c2dcb6beaeaa9030b9e0cb33b0ef82/res/values-id/values-id.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/facebook-common-5.0.1.aar/7859915365a8e3df6db0cdc0941659a8/res/values-id/values-id.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

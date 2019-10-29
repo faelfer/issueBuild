@@ -53,6 +53,8 @@
     android:largeHeap="true"
     android:usesCleartextTraffic="true">
 
+      <meta-data android:name="com.transistorsoft.locationmanager.license" android:value="179eaf84cf4bc29f30aa225ff762b4a83d1465e5af5c33afaa3261cfec6cdfb4" />
+
     <activity
       android:name=".LauncherActivity"
       android:exported="true"
@@ -171,7 +173,7 @@
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="expo.modules.payments.stripe.f0330f46-8721-4097-879f-d2b5836373c7" />
+            <data android:scheme="expo.modules.payments.stripe.dae69444-50d2-4cc9-9dbb-15ba7394bd36" />
         </intent-filter>
     </activity>
     <!-- Versioned Activity for Stripe -->
@@ -363,7 +365,7 @@
     <!-- The Facebook SDK runs FacebookInitProvider on startup and crashes if there isn't an ID here -->
     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb0"/>
 
-    <meta-data android:name="standaloneStripeScheme" android:value="f0330f46-8721-4097-879f-d2b5836373c7" />
+    <meta-data android:name="standaloneStripeScheme" android:value="dae69444-50d2-4cc9-9dbb-15ba7394bd36" />
   </application>
 
 </manifest>

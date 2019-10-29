@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pedro/Documents/issueGeolocation/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/Users/dewaysoftwarehouse/Documents/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/9b3692de90de6bc4a7b3bff683e50a19/res/values-watch-v20/values.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/265f6abe7bfec6320a57a71362a93eab/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d63b0e8ec34bc0371431a540583e1f85/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/47e5953bb9146d1961f072bed14b49cd/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -3,14 +3,15 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/common" />
-            <option value="$PROJECT_DIR$/../node_modules/@mauron85/react-native-background-geolocation/android/lib" />
             <option value="$PROJECT_DIR$/../node_modules/@unimodules/core/android" />
             <option value="$PROJECT_DIR$/../node_modules/@unimodules/react-native-adapter/android" />
             <option value="$PROJECT_DIR$/../node_modules/expo-app-loader-provider/android" />
@@ -23,6 +24,8 @@
             <option value="$PROJECT_DIR$/../node_modules/expo-sqlite/android" />
             <option value="$PROJECT_DIR$/../node_modules/expo-web-browser/android" />
             <option value="$PROJECT_DIR$/../node_modules/expo/node_modules/expo-file-system/android" />
+            <option value="$PROJECT_DIR$/../node_modules/react-native-background-fetch/android" />
+            <option value="$PROJECT_DIR$/../node_modules/react-native-background-geolocation/android" />
             <option value="$PROJECT_DIR$/../node_modules/unimodules-barcode-scanner-interface/android" />
             <option value="$PROJECT_DIR$/../node_modules/unimodules-camera-interface/android" />
             <option value="$PROJECT_DIR$/../node_modules/unimodules-constants-interface/android" />
@@ -36,6 +39,7 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

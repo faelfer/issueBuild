@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pedro/Documents/issueGeolocation/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/Users/dewaysoftwarehouse/Documents/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d63b0e8ec34bc0371431a540583e1f85/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/47e5953bb9146d1961f072bed14b49cd/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/94332bd1fb279f24afdf9c7e7939fcad/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b74509bb717e226fef75868e11334fce/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

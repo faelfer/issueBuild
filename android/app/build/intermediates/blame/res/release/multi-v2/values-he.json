@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pedro/Documents/issueGeolocation/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-he/values-he.xml",
+            "outputFile": "/Users/dewaysoftwarehouse/Documents/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-he/values-he.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.7.0.aar/506d144a7dfa893afd38aaba9416caf7/res/values-he/values-he.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.7.0.aar/6ba5484fb3282a1b2a53fad6fce1753f/res/values-he/values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

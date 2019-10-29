@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pedro/Documents/issueGeolocation/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rES/values-es-rES.xml",
+            "outputFile": "/Users/dewaysoftwarehouse/Documents/issueBuild/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/facebook-login-5.0.1.aar/5df5c1505b08bcad11e77a99ae46138b/res/values-es-rES/values-es-rES.xml",
+                    "source": "/Users/dewaysoftwarehouse/.gradle/caches/transforms-1/files-1.1/facebook-login-5.0.1.aar/0222204358e88a394f4a3232478c7d65/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

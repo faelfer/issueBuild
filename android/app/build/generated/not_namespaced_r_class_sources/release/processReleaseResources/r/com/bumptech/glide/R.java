@@ -92,35 +92,35 @@ public final class R {
         public static final int action_image = 0x7f090016;
         public static final int action_text = 0x7f09001c;
         public static final int actions = 0x7f09001d;
-        public static final int async = 0x7f09002c;
-        public static final int blocking = 0x7f090031;
-        public static final int bottom = 0x7f090033;
-        public static final int chronometer = 0x7f090049;
-        public static final int end = 0x7f090078;
-        public static final int forever = 0x7f090091;
-        public static final int glide_custom_view_target_tag = 0x7f090094;
-        public static final int icon = 0x7f0900a3;
-        public static final int icon_group = 0x7f0900a4;
-        public static final int info = 0x7f0900a9;
-        public static final int italic = 0x7f0900ac;
-        public static final int left = 0x7f0900b1;
-        public static final int line1 = 0x7f0900b3;
-        public static final int line3 = 0x7f0900b4;
-        public static final int none = 0x7f0900cb;
-        public static final int normal = 0x7f0900cc;
-        public static final int notification_background = 0x7f0900cd;
-        public static final int notification_main_column = 0x7f0900ce;
-        public static final int notification_main_column_container = 0x7f0900cf;
-        public static final int right = 0x7f0900e7;
-        public static final int right_icon = 0x7f0900e8;
-        public static final int right_side = 0x7f0900e9;
-        public static final int start = 0x7f090120;
-        public static final int tag_transition_group = 0x7f09012a;
-        public static final int text = 0x7f09012f;
-        public static final int text2 = 0x7f090130;
-        public static final int time = 0x7f090139;
-        public static final int title = 0x7f09013a;
-        public static final int top = 0x7f09013f;
+        public static final int async = 0x7f09002d;
+        public static final int blocking = 0x7f090032;
+        public static final int bottom = 0x7f090034;
+        public static final int chronometer = 0x7f09004a;
+        public static final int end = 0x7f090079;
+        public static final int forever = 0x7f090092;
+        public static final int glide_custom_view_target_tag = 0x7f090095;
+        public static final int icon = 0x7f0900a4;
+        public static final int icon_group = 0x7f0900a5;
+        public static final int info = 0x7f0900aa;
+        public static final int italic = 0x7f0900ad;
+        public static final int left = 0x7f0900b2;
+        public static final int line1 = 0x7f0900b4;
+        public static final int line3 = 0x7f0900b5;
+        public static final int none = 0x7f0900cc;
+        public static final int normal = 0x7f0900cd;
+        public static final int notification_background = 0x7f0900d2;
+        public static final int notification_main_column = 0x7f0900d3;
+        public static final int notification_main_column_container = 0x7f0900d4;
+        public static final int right = 0x7f0900ec;
+        public static final int right_icon = 0x7f0900ed;
+        public static final int right_side = 0x7f0900ee;
+        public static final int start = 0x7f090125;
+        public static final int tag_transition_group = 0x7f09012f;
+        public static final int text = 0x7f090134;
+        public static final int text2 = 0x7f090135;
+        public static final int time = 0x7f09013e;
+        public static final int title = 0x7f09013f;
+        public static final int top = 0x7f090144;
     }
     public static final class integer {
         private integer() {}
@@ -140,7 +140,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int status_bar_notification_info_overflow = 0x7f1000c1;
+        public static final int status_bar_notification_info_overflow = 0x7f1000c0;
     }
     public static final class style {
         private style() {}

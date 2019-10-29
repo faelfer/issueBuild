@@ -95,15 +95,14 @@
         android:name="android.hardware.bluetooth"
         android:required="false" />
 
-    <uses-permission android:name="android.hardware.location" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- for android -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.STORAGE" /> <!-- for android -->
     <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
@@ -128,6 +127,10 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true" >
+        <meta-data
+            android:name="com.transistorsoft.locationmanager.license"
+            android:value="179eaf84cf4bc29f30aa225ff762b4a83d1465e5af5c33afaa3261cfec6cdfb4" />
+
         <activity
             android:name="host.exp.exponent.LauncherActivity"
             android:exported="true"
@@ -238,7 +241,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="expo.modules.payments.stripe.f0330f46-8721-4097-879f-d2b5836373c7" />
+                <data android:scheme="expo.modules.payments.stripe.dae69444-50d2-4cc9-9dbb-15ba7394bd36" />
             </intent-filter>
         </activity>
         <!-- Versioned Activity for Stripe -->
@@ -442,7 +445,7 @@
             android:value="fb0" />
         <meta-data
             android:name="standaloneStripeScheme"
-            android:value="f0330f46-8721-4097-879f-d2b5836373c7" />
+            android:value="dae69444-50d2-4cc9-9dbb-15ba7394bd36" />
         <!-- WHEN_VERSIONING_REMOVE_FROM_HERE -->
         <!-- Scheduled notifications -->
         <receiver
@@ -467,45 +470,63 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <activity
+            android:name="com.transistorsoft.locationmanager.activity.TSLocationManagerActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.Transparent" />
+
+        <service android:name="com.transistorsoft.locationmanager.service.TrackingService" />
+        <service android:name="com.transistorsoft.locationmanager.service.LocationRequestService" />
+        <service android:name="com.transistorsoft.locationmanager.service.HeartbeatService" />
+        <service android:name="com.transistorsoft.locationmanager.service.ActivityRecognitionService" />
+        <service android:name="com.transistorsoft.locationmanager.service.GeofencingService" />
+        <service android:name="com.transistorsoft.locationmanager.service.BackgroundTaskService" />
+
+        <receiver android:name="com.transistorsoft.locationmanager.scheduler.ScheduleAlarmReceiver" />
+
+        <service android:name="com.transistorsoft.locationmanager.scheduler.ScheduleService" />
         <service
-            android:name="com.marianhello.bgloc.sync.SyncService"
+            android:name="com.transistorsoft.locationmanager.scheduler.ScheduleJobService"
             android:exported="true"
-            android:process=":sync" >
-            <intent-filter>
-                <action android:name="android.content.SyncAdapter" />
-            </intent-filter>
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
-            <meta-data
-                android:name="android.content.SyncAdapter"
-                android:resource="@xml/syncadapter" />
-        </service>
-        <service android:name="com.marianhello.bgloc.sync.AuthenticatorService" >
-            <intent-filter>
-                <action android:name="android.accounts.AccountAuthenticator" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.accounts.AccountAuthenticator"
-                android:resource="@xml/authenticator" />
-        </service>
-
-        <provider
-            android:name="com.marianhello.bgloc.data.provider.LocationContentProvider"
-            android:authorities="@string/mauron85_bgloc_content_authority"
-            android:exported="false"
-            android:syncable="true" />
-
-        <service
-            android:name="com.marianhello.bgloc.LocationServiceImpl"
-            android:enabled="true"
-            android:exported="false" />
-
-        <receiver
-            android:name="com.marianhello.bgloc.BootCompletedReceiver"
-            android:enabled="true"
-            android:exported="true" >
+        <receiver android:name="com.transistorsoft.locationmanager.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.transistorsoft.locationmanager.util.LogFileProvider"
+            android:authorities="br.com.deway.sentinela.tslocationmanager.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/tslocationmanager_file_provider_path" />
+        </provider> <!-- HeadlessJS For android sdk 21+ uses new JobScheduler API -->
+        <service
+            android:name="com.transistorsoft.rnbackgroundfetch.HeadlessJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- HeadlessJS For Android sdk <21 uses old AlarmManager API -->
+        <receiver android:name="com.transistorsoft.rnbackgroundfetch.HeadlessBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="br.com.deway.sentinela.event.BACKGROUND_FETCH" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver" />
+
+        <service
+            android:name="com.transistorsoft.tsbackgroundfetch.FetchJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="com.transistorsoft.tsbackgroundfetch.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
 
@@ -521,10 +542,6 @@
 
         <service
             android:name="expo.modules.location.services.LocationTaskService"
-            android:exported="false" />
-        <service
-            android:name="com.marianhello.bgloc.service.LocationServiceImpl"
-            android:enabled="true"
             android:exported="false" />
 
         <activity android:name="com.facebook.CustomTabMainActivity" />

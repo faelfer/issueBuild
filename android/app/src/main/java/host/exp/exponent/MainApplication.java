@@ -13,7 +13,8 @@ import okhttp3.OkHttpClient;
 
 // Needed for `react-native link`
 // import com.facebook.react.ReactApplication;
-import com.marianhello.bgloc.react.BackgroundGeolocationPackage;
+import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
+import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
 
 public class MainApplication extends ExpoApplication implements AppLoaderPackagesProviderInterface<ReactPackage> {
 
@@ -30,7 +31,8 @@ public class MainApplication extends ExpoApplication implements AppLoaderPackage
 
         // Needed for `react-native link`
         // new MainReactPackage(),
-            new BackgroundGeolocationPackage()
+            new RNBackgroundGeolocation(),
+            new RNBackgroundFetchPackage()
     );
   }
 

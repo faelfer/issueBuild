@@ -2145,12 +2145,12 @@ android.support.v4.app.NotificationCompat$Builder:
     842:843:public android.support.v4.app.NotificationCompat$Builder setSubText(java.lang.CharSequence)
     861:862:public android.support.v4.app.NotificationCompat$Builder setRemoteInputHistory(java.lang.CharSequence[])
     879:880:public android.support.v4.app.NotificationCompat$Builder setContentInfo(java.lang.CharSequence)
+    888:891:public android.support.v4.app.NotificationCompat$Builder setProgress(int,int,boolean)
     946:948:public android.support.v4.app.NotificationCompat$Builder setFullScreenIntent(android.app.PendingIntent,boolean)
     968:970:public android.support.v4.app.NotificationCompat$Builder setTicker(java.lang.CharSequence,android.widget.RemoteViews)
     1041:1049:public android.support.v4.app.NotificationCompat$Builder setSound(android.net.Uri,int)
     1074:1080:public android.support.v4.app.NotificationCompat$Builder setLights(int,int,int)
     1118:1120:public android.support.v4.app.NotificationCompat$Builder setColorized(boolean)
-    1128:1129:public android.support.v4.app.NotificationCompat$Builder setOnlyAlertOnce(boolean)
     1162:1163:public android.support.v4.app.NotificationCompat$Builder setCategory(java.lang.String)
     1237:1238:public android.support.v4.app.NotificationCompat$Builder addPerson(java.lang.String)
     1253:1254:public android.support.v4.app.NotificationCompat$Builder setGroup(java.lang.String)
@@ -2163,14 +2163,12 @@ android.support.v4.app.NotificationCompat$Builder:
     1445:1446:public android.support.v4.app.NotificationCompat$Builder setVisibility(int)
     1458:1459:public android.support.v4.app.NotificationCompat$Builder setPublicVersion(android.app.Notification)
     1469:1470:public android.support.v4.app.NotificationCompat$Builder setCustomContentView(android.widget.RemoteViews)
-    1482:1483:public android.support.v4.app.NotificationCompat$Builder setCustomBigContentView(android.widget.RemoteViews)
     1495:1496:public android.support.v4.app.NotificationCompat$Builder setCustomHeadsUpContentView(android.widget.RemoteViews)
     1514:1515:public android.support.v4.app.NotificationCompat$Builder setTimeoutAfter(long)
     1530:1531:public android.support.v4.app.NotificationCompat$Builder setShortcutId(java.lang.String)
     1544:1545:public android.support.v4.app.NotificationCompat$Builder setBadgeIconType(int)
     1559:1560:public android.support.v4.app.NotificationCompat$Builder setGroupAlertBehavior(int)
     1568:1569:public android.support.v4.app.NotificationCompat$Builder extend(android.support.v4.app.NotificationCompat$Extender)
-    1577:1577:public android.app.Notification getNotification()
     1601:1601:public android.widget.RemoteViews getContentView()
     1609:1609:public android.widget.RemoteViews getBigContentView()
     1617:1617:public android.widget.RemoteViews getHeadsUpContentView()
@@ -3651,6 +3649,7 @@ android.support.v4.util.TimeUtils:
     private static final int SECONDS_PER_MINUTE
     private static final int SECONDS_PER_HOUR
     private static final int SECONDS_PER_DAY
+    154:158:public static void formatDuration(long,java.lang.StringBuilder)
     185:185:private TimeUtils()
 android.support.v4.view.AbsSavedState:
     59:60:protected AbsSavedState(android.os.Parcel)
@@ -6083,66 +6082,6 @@ bolts.WebViewAppLinkResolver$2
 bolts.WebViewAppLinkResolver$2$1
 bolts.WebViewAppLinkResolver$2$2
 bolts.WebViewAppLinkResolver$3
-brut.androlib.AndrolibException:
-    public AndrolibException()
-    public AndrolibException(java.lang.String)
-    public AndrolibException(java.lang.String,java.lang.Throwable)
-    public AndrolibException(java.lang.Throwable)
-brut.androlib.res.decoder.AXmlResourceParser:
-    private static final java.lang.String E_NOT_SUPPORTED
-    private static final int ATTRIBUTE_IX_NAMESPACE_URI
-    private static final int ATTRIBUTE_IX_NAME
-    private static final int ATTRIBUTE_IX_VALUE_STRING
-    private static final int ATTRIBUTE_IX_VALUE_TYPE
-    private static final int ATTRIBUTE_IX_VALUE_DATA
-    private static final int ATTRIBUTE_LENGHT
-    private static final int CHUNK_AXML_FILE
-    private static final int CHUNK_RESOURCEIDS
-    private static final int CHUNK_XML_FIRST
-    private static final int CHUNK_XML_START_NAMESPACE
-    private static final int CHUNK_XML_END_NAMESPACE
-    private static final int CHUNK_XML_START_TAG
-    private static final int CHUNK_XML_END_TAG
-    private static final int CHUNK_XML_TEXT
-    private static final int CHUNK_XML_LAST
-    public brut.androlib.AndrolibException getFirstError()
-    public brut.androlib.res.decoder.ResAttrDecoder getAttrDecoder()
-    public void setAttrDecoder(brut.androlib.res.decoder.ResAttrDecoder)
-    public int getAttributeValueType(int)
-    public int getAttributeValueData(int)
-    final brut.androlib.res.decoder.StringBlock getStrings()
-brut.androlib.res.decoder.AXmlResourceParser$NamespaceStack:
-    public final int getTotalCount()
-    public final boolean pop(int,int)
-    public final int findUri(int)
-brut.androlib.res.decoder.StringBlock:
-    private static final int CHUNK_TYPE
-    private static final int UTF8_FLAG
-    public int getCount()
-    public java.lang.CharSequence get(int)
-    public java.lang.String getHTML(int)
-    private void outputStyleTag(java.lang.String,java.lang.StringBuilder,boolean)
-    private int[] getStyle(int)
-    private static final int getShort(int[],int)
-brut.androlib.res.xml.ResXmlEncoders:
-    private static final char CHAR_UNDEFINED
-    public ResXmlEncoders()
-    public static java.lang.String encodeAsResXmlAttr(java.lang.String)
-    public static java.lang.String encodeAsXmlValue(java.lang.String)
-    public static boolean hasMultipleNonPositionalSubstitutions(java.lang.String)
-    public static java.lang.String enumerateNonPositionalSubstitutions(java.lang.String)
-    private static java.util.List findNonPositionalSubstitutions(java.lang.String,int)
-    private static boolean isPrintableChar(char)
-brut.common.BrutException:
-    public BrutException(java.lang.Throwable)
-    public BrutException(java.lang.String,java.lang.Throwable)
-    public BrutException(java.lang.String)
-    public BrutException()
-brut.util.ExtDataInput:
-    public ExtDataInput(java.io.InputStream)
-    public void skipCheckShort(short)
-    public void skipCheckByte(byte)
-    public java.lang.String readNulEndedString(int,boolean)
 ch.qos.logback.classic.AsyncAppender
 ch.qos.logback.classic.BasicConfigurator
 ch.qos.logback.classic.ClassicConstants:
@@ -6166,44 +6105,52 @@ ch.qos.logback.classic.Level:
     public static ch.qos.logback.classic.Level fromLocationAwareLoggerInteger(int)
     public static int toLocationAwareLoggerInteger(ch.qos.logback.classic.Level)
 ch.qos.logback.classic.Logger:
-    private static final int DEFAULT_CHILD_ARRAY_SIZE
     int getEffectiveLevelInt()
     public boolean detachAppender(java.lang.String)
     public boolean isAttached(ch.qos.logback.core.Appender)
     public java.util.Iterator iteratorForAppenders()
     public boolean detachAppender(ch.qos.logback.core.Appender)
     ch.qos.logback.classic.Logger createChildByLastNamePart(java.lang.String)
+    private void filterAndLog_1(java.lang.String,org.slf4j.Marker,ch.qos.logback.classic.Level,java.lang.String,java.lang.Object,java.lang.Throwable)
+    private void filterAndLog_2(java.lang.String,org.slf4j.Marker,ch.qos.logback.classic.Level,java.lang.String,java.lang.Object,java.lang.Object,java.lang.Throwable)
     public void trace(java.lang.String)
     public void trace(java.lang.String,java.lang.Object)
     public void trace(java.lang.String,java.lang.Object,java.lang.Object)
-    public void trace(java.lang.String,java.lang.Object[])
+    public varargs void trace(java.lang.String,java.lang.Object[])
     public void trace(java.lang.String,java.lang.Throwable)
     public void trace(org.slf4j.Marker,java.lang.String)
     public void trace(org.slf4j.Marker,java.lang.String,java.lang.Object)
     public void trace(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)
-    public void trace(org.slf4j.Marker,java.lang.String,java.lang.Object[])
+    public varargs void trace(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public void trace(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public boolean isDebugEnabled()
     public boolean isDebugEnabled(org.slf4j.Marker)
-    public void debug(java.lang.String,java.lang.Throwable)
+    public void debug(java.lang.String,java.lang.Object)
+    public void debug(java.lang.String,java.lang.Object,java.lang.Object)
+    public varargs void debug(java.lang.String,java.lang.Object[])
     public void debug(org.slf4j.Marker,java.lang.String)
     public void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)
     public void debug(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)
-    public void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])
+    public varargs void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
-    public void error(java.lang.String,java.lang.Object[])
+    public void error(java.lang.String,java.lang.Object)
+    public void error(java.lang.String,java.lang.Object,java.lang.Object)
+    public varargs void error(java.lang.String,java.lang.Object[])
     public void error(org.slf4j.Marker,java.lang.String)
     public void error(org.slf4j.Marker,java.lang.String,java.lang.Object)
     public void error(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)
-    public void error(org.slf4j.Marker,java.lang.String,java.lang.Object[])
+    public varargs void error(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public void error(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public boolean isInfoEnabled()
     public boolean isInfoEnabled(org.slf4j.Marker)
+    public void info(java.lang.String,java.lang.Object)
+    public void info(java.lang.String,java.lang.Object,java.lang.Object)
+    public varargs void info(java.lang.String,java.lang.Object[])
     public void info(java.lang.String,java.lang.Throwable)
     public void info(org.slf4j.Marker,java.lang.String)
     public void info(org.slf4j.Marker,java.lang.String,java.lang.Object)
     public void info(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)
-    public void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])
+    public varargs void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public boolean isTraceEnabled()
     public boolean isTraceEnabled(org.slf4j.Marker)
@@ -6213,32 +6160,33 @@ ch.qos.logback.classic.Logger:
     public boolean isWarnEnabled(org.slf4j.Marker)
     public boolean isEnabledFor(org.slf4j.Marker,ch.qos.logback.classic.Level)
     public boolean isEnabledFor(ch.qos.logback.classic.Level)
-    public void warn(java.lang.String,java.lang.Throwable)
+    public void warn(java.lang.String,java.lang.Object)
     public void warn(java.lang.String,java.lang.Object,java.lang.Object)
-    public void warn(java.lang.String,java.lang.Object[])
+    public varargs void warn(java.lang.String,java.lang.Object[])
     public void warn(org.slf4j.Marker,java.lang.String)
     public void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)
-    public void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])
+    public varargs void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public void warn(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)
     public void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public boolean isAdditive()
     private ch.qos.logback.core.spi.FilterReply callTurboFilters(org.slf4j.Marker,ch.qos.logback.classic.Level)
     public void log(org.slf4j.Marker,java.lang.String,int,java.lang.String,java.lang.Object[],java.lang.Throwable)
+    public void log(org.slf4j.event.LoggingEvent)
 ch.qos.logback.classic.LoggerContext:
+    public static final boolean DEFAULT_PACKAGING_DATA
     public final ch.qos.logback.classic.Logger getLogger(java.lang.Class)
     int size()
     public ch.qos.logback.classic.Logger exists(java.lang.String)
     public java.util.List getLoggerList()
     public ch.qos.logback.classic.spi.TurboFilterList getTurboFilterList()
+    public void addTurboFilter(ch.qos.logback.classic.turbo.TurboFilter)
+    final ch.qos.logback.core.spi.FilterReply getTurboFilterChainDecision_1(org.slf4j.Marker,ch.qos.logback.classic.Logger,ch.qos.logback.classic.Level,java.lang.String,java.lang.Object,java.lang.Throwable)
+    final ch.qos.logback.core.spi.FilterReply getTurboFilterChainDecision_2(org.slf4j.Marker,ch.qos.logback.classic.Logger,ch.qos.logback.classic.Level,java.lang.String,java.lang.Object,java.lang.Object,java.lang.Throwable)
     public void removeListener(ch.qos.logback.classic.spi.LoggerContextListener)
     public java.util.List getCopyOfListenerList()
     public void setMaxCallerDataDepth(int)
-ch.qos.logback.classic.android.ASaxEventRecorder$StatePassFilter:
-    public int size()
-    public int depth()
-ch.qos.logback.classic.android.AndroidManifestPropertiesUtil:
-    public AndroidManifestPropertiesUtil()
 ch.qos.logback.classic.android.BasicLogcatConfigurator
+ch.qos.logback.classic.android.Clock
 ch.qos.logback.classic.android.LogcatAppender:
     private static final int MAX_TAG_LENGTH
     public ch.qos.logback.classic.encoder.PatternLayoutEncoder getEncoder()
@@ -6246,27 +6194,9 @@ ch.qos.logback.classic.android.LogcatAppender:
     public void setTagEncoder(ch.qos.logback.classic.encoder.PatternLayoutEncoder)
     public void setCheckLoggable(boolean)
     public boolean getCheckLoggable()
-ch.qos.logback.classic.android.SQLiteAppender:
-    private static final int TIMESTMP_INDEX
-    private static final int FORMATTED_MESSAGE_INDEX
-    private static final int LOGGER_NAME_INDEX
-    private static final int LEVEL_STRING_INDEX
-    private static final int THREAD_NAME_INDEX
-    private static final int REFERENCE_FLAG_INDEX
-    private static final int ARG0_INDEX
-    private static final int CALLER_FILENAME_INDEX
-    private static final int CALLER_CLASS_INDEX
-    private static final int CALLER_METHOD_INDEX
-    private static final int CALLER_LINE_INDEX
-    private static final short PROPERTIES_EXIST
-    private static final short EXCEPTION_EXISTS
-    void setClock(ch.qos.logback.classic.android.Clock)
-    public void setDbNameResolver(ch.qos.logback.classic.db.names.DBNameResolver)
-    public java.lang.String getMaxHistory()
-    public long getMaxHistoryMs()
-    public java.lang.String getFilename()
-    public void setFilename(java.lang.String)
-    public void setLogCleaner(ch.qos.logback.classic.android.SQLiteLogCleaner)
+ch.qos.logback.classic.android.SQLiteAppender
+ch.qos.logback.classic.android.SQLiteAppender$1
+ch.qos.logback.classic.android.SystemClock
 ch.qos.logback.classic.boolex.OnErrorEvaluator
 ch.qos.logback.classic.boolex.OnMarkerEvaluator
 ch.qos.logback.classic.db.SQLBuilder:
@@ -6278,8 +6208,14 @@ ch.qos.logback.classic.html.DefaultCssBuilder
 ch.qos.logback.classic.html.DefaultThrowableRenderer
 ch.qos.logback.classic.html.HTMLLayout
 ch.qos.logback.classic.html.UrlCssBuilder
+ch.qos.logback.classic.joran.ReconfigureOnChangeTask:
+    public static final java.lang.String DETECTED_CHANGE_IN_CONFIGURATION_FILES
+    static final java.lang.String RE_REGISTERING_PREVIOUS_SAFE_CONFIGURATION
+    static final java.lang.String FALLING_BACK_TO_SAFE_CONFIGURATION
+    void addListener(ch.qos.logback.classic.joran.ReconfigureOnChangeTaskListener)
 ch.qos.logback.classic.joran.action.ConfigurationAction:
     static final java.lang.String INTERNAL_DEBUG_ATTR
+    static final java.lang.String PACKAGING_DATA_ATTR
     static final java.lang.String SCAN_ATTR
     static final java.lang.String SCAN_PERIOD_ATTR
     static final java.lang.String DEBUG_SYSTEM_PROPERTY_KEY
@@ -6295,6 +6231,7 @@ ch.qos.logback.classic.joran.action.RootLoggerAction:
     public void finish(ch.qos.logback.core.joran.spi.InterpretationContext)
 ch.qos.logback.classic.jul.JULHelper
 ch.qos.logback.classic.jul.LevelChangePropagator
+ch.qos.logback.classic.layout.TTLLLayout
 ch.qos.logback.classic.log4j.XMLLayout
 ch.qos.logback.classic.net.LoggingEventPreSerializationTransformer
 ch.qos.logback.classic.net.SMTPAppender
@@ -6306,6 +6243,7 @@ ch.qos.logback.classic.net.SocketAppender
 ch.qos.logback.classic.net.SocketNode
 ch.qos.logback.classic.net.SocketReceiver
 ch.qos.logback.classic.net.SyslogAppender
+ch.qos.logback.classic.net.server.HardenedLoggingEventInputStream
 ch.qos.logback.classic.net.server.RemoteAppenderClient
 ch.qos.logback.classic.net.server.RemoteAppenderServerListener
 ch.qos.logback.classic.net.server.RemoteAppenderServerRunner
@@ -6316,6 +6254,7 @@ ch.qos.logback.classic.net.server.ServerSocketAppender
 ch.qos.logback.classic.net.server.ServerSocketReceiver
 ch.qos.logback.classic.pattern.CallerDataConverter:
     public static final java.lang.String DEFAULT_CALLER_LINE_PREFIX
+    public static final java.lang.String DEFAULT_RANGE_DELIMITER
 ch.qos.logback.classic.pattern.ExtendedThrowableProxyConverter:
     protected void prepareLoggingEvent(ch.qos.logback.classic.spi.ILoggingEvent)
 ch.qos.logback.classic.pattern.SyslogStartConverter
@@ -6353,6 +6292,7 @@ ch.qos.logback.classic.spi.CallerData:
     public static java.lang.StackTraceElement naInstance()
 ch.qos.logback.classic.spi.ClassPackagingData:
     public ClassPackagingData(java.lang.String,java.lang.String)
+ch.qos.logback.classic.spi.Configurator
 ch.qos.logback.classic.spi.EventArgUtil:
     public EventArgUtil()
     public static java.lang.Object[] arrangeArguments(java.lang.Object[])
@@ -6372,7 +6312,6 @@ ch.qos.logback.classic.spi.LoggingEvent:
     public void setLoggerName(java.lang.String)
     public void setThreadName(java.lang.String)
     public void setThrowableProxy(ch.qos.logback.classic.spi.ThrowableProxy)
-    public void prepareForDeferredProcessing()
     public void setLoggerContextRemoteView(ch.qos.logback.classic.spi.LoggerContextVO)
     public java.lang.String getMessage()
     public void setMessage(java.lang.String)
@@ -6411,12 +6350,8 @@ ch.qos.logback.classic.turbo.MDCFilter
 ch.qos.logback.classic.turbo.MDCValueLevelPair
 ch.qos.logback.classic.turbo.MarkerFilter
 ch.qos.logback.classic.turbo.MatchingFilter
-ch.qos.logback.classic.turbo.ReconfigureOnChangeFilter:
-    public static final long DEFAULT_REFRESH_PERIOD
-    private static final int MAX_MASK
-    private static final long MASK_INCREASE_THRESHOLD
-    private static final long MASK_DECREASE_THRESHOLD
-    public long getRefreshPeriod()
+ch.qos.logback.classic.turbo.ReconfigureOnChangeFilter
+ch.qos.logback.classic.turbo.ReconfigureOnChangeFilter$ReconfiguringThread
 ch.qos.logback.classic.turbo.TurboFilter:
     private java.lang.String name
     public java.lang.String getName()
@@ -6424,14 +6359,13 @@ ch.qos.logback.classic.turbo.TurboFilter:
 ch.qos.logback.classic.util.ContextInitializer:
     public static final java.lang.String AUTOCONFIG_FILE
     public static final java.lang.String CONFIG_FILE_PROPERTY
-    public static final java.lang.String STATUS_LISTENER_CLASS
 ch.qos.logback.classic.util.CopyOnInheritThreadLocal
 ch.qos.logback.classic.util.DefaultNestedComponentRules:
     public DefaultNestedComponentRules()
 ch.qos.logback.classic.util.LevelToSyslogSeverity
 ch.qos.logback.classic.util.LogbackMDCAdapter:
     private static final int WRITE_OPERATION
-    private static final int READ_OPERATION
+    private static final int MAP_COPY_OPERATION
     private java.lang.Integer getAndSetLastOperation(int)
     private boolean wasLastOpReadOrNull(java.lang.Integer)
     private java.util.Map duplicateAndInsertNewMap(java.util.Map)
@@ -6444,8 +6378,6 @@ ch.qos.logback.classic.util.LogbackMDCAdapter:
 ch.qos.logback.classic.util.LoggerNameUtil:
     public LoggerNameUtil()
     public static int getFirstSeparatorIndexOf(java.lang.String)
-ch.qos.logback.classic.util.StatusListenerConfigHelper:
-    public StatusListenerConfigHelper()
 ch.qos.logback.core.AppenderBase:
     static final int ALLOWED_REPEATS
     public void addFilter(ch.qos.logback.core.filter.Filter)
@@ -6459,14 +6391,21 @@ ch.qos.logback.core.BasicStatusManager:
     public void clear()
     public int getLevel()
     public int getCount()
+    public boolean addUniquely(ch.qos.logback.core.status.StatusListener,java.lang.Object)
 ch.qos.logback.core.ConsoleAppender
 ch.qos.logback.core.Context:
     public abstract java.util.Map getCopyOfPropertyMap()
+    public abstract java.util.concurrent.ExecutorService getExecutorService()
 ch.qos.logback.core.ContextBase:
     public void setStatusManager(ch.qos.logback.core.status.StatusManager)
+    public synchronized java.util.concurrent.ExecutorService getExecutorService()
+    public java.util.List getScheduledFutures()
 ch.qos.logback.core.CoreConstants:
+    public static final java.lang.String STATUS_LISTENER_CLASS
+    public static final int SCHEDULED_EXECUTOR_POOL_SIZE
     public static final int MAX_POOL_SIZE
     public static final java.lang.String CODES_URL
+    public static final java.lang.String MANUAL_URL_PREFIX
     public static final java.lang.String DEFAULT_CONTEXT_NAME
     public static final java.lang.String PATTERN_RULE_REGISTRY
     public static final java.lang.String ISO8601_STR
@@ -6474,6 +6413,8 @@ ch.qos.logback.core.CoreConstants:
     public static final java.lang.String DAILY_DATE_PATTERN
     public static final java.lang.String CLF_DATE_PATTERN
     public static final java.lang.String EVALUATOR_MAP
+    public static final java.lang.String FA_FILENAME_COLLISION_MAP
+    public static final java.lang.String RFA_FILENAME_PATTERN_COLLISION_MAP
     public static final java.lang.String VALUE_OF
     public static final java.lang.String EMPTY_STRING
     public static final java.lang.String CAUSED_BY
@@ -6498,10 +6439,12 @@ ch.qos.logback.core.CoreConstants:
     public static final char TAB
     public static final char DOLLAR
     public static final java.lang.String SEE_FNP_NOT_SET
+    public static final java.lang.String SEE_MISSING_INTEGER_TOKEN
     public static final java.lang.String CONFIGURATION_WATCH_LIST
-    public static final java.lang.String CONFIGURATION_WATCH_LIST_RESET
+    public static final java.lang.String CONFIGURATION_WATCH_LIST_RESET_X
     public static final java.lang.String SAFE_JORAN_CONFIGURATION
     public static final java.lang.String XML_PARSING
+    public static final java.lang.String SHUTDOWN_HOOK_THREAD
     public static final java.lang.String HOSTNAME_KEY
     public static final java.lang.String CONTEXT_NAME_KEY
     public static final java.lang.String DATA_DIR_KEY
@@ -6510,32 +6453,30 @@ ch.qos.logback.core.CoreConstants:
     public static final java.lang.String VERSION_NAME_KEY
     public static final java.lang.String VERSION_CODE_KEY
     public static final int BYTES_PER_INT
-    public static final int MILLIS_IN_ONE_SECOND
-    public static final int MILLIS_IN_ONE_MINUTE
-    public static final int MILLIS_IN_ONE_HOUR
-    public static final int MILLIS_IN_ONE_DAY
-    public static final int MILLIS_IN_ONE_WEEK
+    public static final long MILLIS_IN_ONE_SECOND
+    public static final long MILLIS_IN_ONE_MINUTE
+    public static final long MILLIS_IN_ONE_HOUR
+    public static final long MILLIS_IN_ONE_DAY
+    public static final long MILLIS_IN_ONE_WEEK
     public static final int SECONDS_TO_WAIT_FOR_COMPRESSION_JOBS
     public static final java.lang.String CONTEXT_SCOPE_VALUE
     public static final java.lang.String RESET_MSG_PREFIX
     public static final java.lang.String UNDEFINED_PROPERTY_SUFFIX
+    public static final long UNBOUNDED_TOTAL_SIZE_CAP
+    public static final int UNBOUND_HISTORY
+    public static final java.lang.String RECONFIGURE_ON_CHANGE_TASK
+    public static final java.lang.String SIZE_AND_TIME_BASED_FNATP_IS_DEPRECATED
     public CoreConstants()
 ch.qos.logback.core.FileAppender
 ch.qos.logback.core.Layout:
     public abstract java.lang.String getFileHeader()
     public abstract java.lang.String getPresentationHeader()
-    public abstract java.lang.String getPresentationFooter()
-    public abstract java.lang.String getFileFooter()
     public abstract java.lang.String getContentType()
 ch.qos.logback.core.LayoutBase:
     java.lang.String fileHeader
-    java.lang.String fileFooter
     java.lang.String presentationHeader
-    java.lang.String presentationFooter
     public java.lang.String getFileHeader()
     public java.lang.String getPresentationHeader()
-    public java.lang.String getPresentationFooter()
-    public java.lang.String getFileFooter()
     public java.lang.String getContentType()
     public void setFileHeader(java.lang.String)
     public void setFileFooter(java.lang.String)
@@ -6545,17 +6486,28 @@ ch.qos.logback.core.LogbackException:
     public LogbackException(java.lang.String)
     public LogbackException(java.lang.String,java.lang.Throwable)
 ch.qos.logback.core.NOPOutputStream
-ch.qos.logback.core.OutputStreamAppender
+ch.qos.logback.core.OutputStreamAppender:
+    public java.io.OutputStream getOutputStream()
+    public void setLayout(ch.qos.logback.core.Layout)
+    void encoderInit()
+    public void setOutputStream(java.io.OutputStream)
+    protected void writeOut(java.lang.Object)
+    public ch.qos.logback.core.encoder.Encoder getEncoder()
+    public void setEncoder(ch.qos.logback.core.encoder.Encoder)
+    public boolean isImmediateFlush()
 ch.qos.logback.core.PropertyDefinerBase
 ch.qos.logback.core.UnsynchronizedAppenderBase:
     static final int ALLOWED_REPEATS
     public void addFilter(ch.qos.logback.core.filter.Filter)
     public void clearAllFilters()
     public java.util.List getCopyOfAttachedFiltersList()
-ch.qos.logback.core.android.CommonPathUtil:
-    private static final java.lang.String ASSETS_DIRECTORY
-    public CommonPathUtil()
-    public static java.lang.String getExternalStorageDirectoryPath()
+ch.qos.logback.core.android.AndroidContextUtil:
+    public java.lang.String getExternalStorageDirectoryPath()
+    public java.lang.String getExternalFilesDirectoryPath()
+    public java.lang.String getCacheDirectoryPath()
+    public java.lang.String getExternalCacheDirectoryPath()
+    public java.lang.String getNoBackupFilesDirectoryPath()
+    public java.lang.String getDatabaseDirectoryPath()
 ch.qos.logback.core.android.SystemPropertiesProxy:
     public java.lang.Boolean getBoolean(java.lang.String,boolean)
 ch.qos.logback.core.boolex.EvaluationException:
@@ -6568,28 +6520,15 @@ ch.qos.logback.core.boolex.EventEvaluatorBase
 ch.qos.logback.core.encoder.ByteArrayUtil
 ch.qos.logback.core.encoder.EchoEncoder
 ch.qos.logback.core.encoder.Encoder:
-    public abstract void init(java.io.OutputStream)
-    public abstract void doEncode(java.lang.Object)
-    public abstract void close()
-ch.qos.logback.core.encoder.EncoderBase:
-    public void init(java.io.OutputStream)
-ch.qos.logback.core.encoder.EventObjectInputStream
+    public abstract byte[] headerBytes()
 ch.qos.logback.core.encoder.LayoutWrappingEncoder:
-    private java.nio.charset.Charset charset
-    public void setImmediateFlush(boolean)
-    public boolean isImmediateFlush()
     public void setLayout(ch.qos.logback.core.Layout)
     public java.nio.charset.Charset getCharset()
     public void setCharset(java.nio.charset.Charset)
-    public void init(java.io.OutputStream)
-    void writeHeader()
-    public void close()
-    void writeFooter()
-    private byte[] convertToBytes(java.lang.String)
-    public void doEncode(java.lang.Object)
-    private void appendIfNotNull(java.lang.StringBuilder,java.lang.String)
+    public void setImmediateFlush(boolean)
+    public byte[] headerBytes()
+    public void setParent(ch.qos.logback.core.Appender)
 ch.qos.logback.core.encoder.NonClosableInputStream
-ch.qos.logback.core.encoder.ObjectStreamEncoder
 ch.qos.logback.core.filter.AbstractMatcherFilter
 ch.qos.logback.core.filter.EvaluatorFilter
 ch.qos.logback.core.filter.Filter:
@@ -6605,6 +6544,9 @@ ch.qos.logback.core.helpers.CyclicBuffer:
 ch.qos.logback.core.helpers.ThrowableToStringArray:
     public ThrowableToStringArray()
 ch.qos.logback.core.helpers.Transform
+ch.qos.logback.core.hook.DefaultShutdownHook:
+    public ch.qos.logback.core.util.Duration getDelay()
+    public void setDelay(ch.qos.logback.core.util.Duration)
 ch.qos.logback.core.html.CssBuilder
 ch.qos.logback.core.html.HTMLLayoutBase
 ch.qos.logback.core.html.IThrowableRenderer
@@ -6612,6 +6554,7 @@ ch.qos.logback.core.html.NOPThrowableRenderer
 ch.qos.logback.core.joran.GenericConfigurator:
     public final void doConfigure(java.lang.String)
     public final void doConfigure(java.io.File)
+    public final void doConfigure(java.io.InputStream)
 ch.qos.logback.core.joran.JoranConfiguratorBase:
     public java.util.List getErrorList()
     public ch.qos.logback.core.joran.spi.InterpretationContext getInterpretationContext()
@@ -6621,8 +6564,6 @@ ch.qos.logback.core.joran.action.AbstractIncludeAction:
     private static final java.lang.String URL_ATTR
     private static final java.lang.String RESOURCE_ATTR
     private static final java.lang.String OPTIONAL_ATTR
-    private java.net.URL urlInUse
-    public java.net.URL getUrl()
     protected java.lang.String getAttributeInUse()
 ch.qos.logback.core.joran.action.Action:
     public static final java.lang.String NAME_ATTRIBUTE
@@ -6653,7 +6594,6 @@ ch.qos.logback.core.joran.action.PropertyAction:
 ch.qos.logback.core.joran.action.StatusListenerAction:
     public void finish(ch.qos.logback.core.joran.spi.InterpretationContext)
 ch.qos.logback.core.joran.event.SaxEvent:
-    public java.lang.String getLocalName()
     public java.lang.String getNamespaceURI()
 ch.qos.logback.core.joran.event.SaxEventRecorder:
     public void addInfo(java.lang.String)
@@ -6663,10 +6603,11 @@ ch.qos.logback.core.joran.event.SaxEventRecorder:
     public ch.qos.logback.core.Context getContext()
 ch.qos.logback.core.joran.event.StartEvent:
     public org.xml.sax.Attributes getAttributes()
-ch.qos.logback.core.joran.node.ComponentNode
 ch.qos.logback.core.joran.spi.ConsoleTarget
 ch.qos.logback.core.joran.spi.ConsoleTarget$1
 ch.qos.logback.core.joran.spi.ConsoleTarget$2
+ch.qos.logback.core.joran.spi.EventPlayer:
+    public java.util.List getCopyOfPlayerEventList()
 ch.qos.logback.core.joran.spi.HostClassAndPropertyDouble:
     public java.lang.Class getHostClass()
     public java.lang.String getPropertyName()
@@ -6697,10 +6638,16 @@ ch.qos.logback.core.joran.util.StringToObjectConverter:
     boolean isBuildableFromSimpleString()
 ch.qos.logback.core.net.AbstractSSLSocketAppender
 ch.qos.logback.core.net.AbstractSocketAppender
+ch.qos.logback.core.net.AbstractSocketAppender$1
+ch.qos.logback.core.net.AutoFlushingObjectWriter
 ch.qos.logback.core.net.DefaultSocketConnector
 ch.qos.logback.core.net.DefaultSocketConnector$1
 ch.qos.logback.core.net.DefaultSocketConnector$ConsoleExceptionHandler
+ch.qos.logback.core.net.HardenedObjectInputStream
 ch.qos.logback.core.net.LoginAuthenticator
+ch.qos.logback.core.net.ObjectWriter
+ch.qos.logback.core.net.ObjectWriterFactory
+ch.qos.logback.core.net.QueueFactory
 ch.qos.logback.core.net.SMTPAppenderBase
 ch.qos.logback.core.net.SMTPAppenderBase$SenderRunnable
 ch.qos.logback.core.net.SSLSocketAppenderBase
@@ -6861,6 +6808,7 @@ ch.qos.logback.core.pattern.FormattingConverter:
     static final int MAX_CAPACITY
     public final ch.qos.logback.core.pattern.FormatInfo getFormattingInfo()
 ch.qos.logback.core.pattern.PatternLayoutBase:
+    static final int INTIAL_STRING_BUILDER_SIZE
     protected void setContextForConverters(ch.qos.logback.core.pattern.Converter)
     public java.util.Map getInstanceConverterMap()
     protected java.lang.String getPresentationHeaderPrefix()
@@ -6923,6 +6871,8 @@ ch.qos.logback.core.rolling.RollingPolicy
 ch.qos.logback.core.rolling.RollingPolicyBase
 ch.qos.logback.core.rolling.RolloverFailure
 ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP
+ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP$Usage
+ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy
 ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy
 ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicy
 ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase
@@ -6930,27 +6880,36 @@ ch.qos.logback.core.rolling.TimeBasedRollingPolicy
 ch.qos.logback.core.rolling.TriggeringPolicy
 ch.qos.logback.core.rolling.TriggeringPolicyBase
 ch.qos.logback.core.rolling.helper.ArchiveRemover
-ch.qos.logback.core.rolling.helper.AsynchronousCompressor
 ch.qos.logback.core.rolling.helper.CompressionMode
-ch.qos.logback.core.rolling.helper.CompressionRunnable
 ch.qos.logback.core.rolling.helper.Compressor
 ch.qos.logback.core.rolling.helper.Compressor$1
+ch.qos.logback.core.rolling.helper.Compressor$CompressionRunnable
+ch.qos.logback.core.rolling.helper.DateParser
 ch.qos.logback.core.rolling.helper.DateTokenConverter
-ch.qos.logback.core.rolling.helper.DefaultArchiveRemover
+ch.qos.logback.core.rolling.helper.DefaultFileProvider
 ch.qos.logback.core.rolling.helper.FileFilterUtil
 ch.qos.logback.core.rolling.helper.FileFilterUtil$1
-ch.qos.logback.core.rolling.helper.FileFilterUtil$2
-ch.qos.logback.core.rolling.helper.FileFilterUtil$3
+ch.qos.logback.core.rolling.helper.FileFinder
 ch.qos.logback.core.rolling.helper.FileNamePattern
+ch.qos.logback.core.rolling.helper.FileProvider
+ch.qos.logback.core.rolling.helper.FileSorter
+ch.qos.logback.core.rolling.helper.FileSorter$1
 ch.qos.logback.core.rolling.helper.FileStoreUtil
+ch.qos.logback.core.rolling.helper.FilenameParser
+ch.qos.logback.core.rolling.helper.IntParser
 ch.qos.logback.core.rolling.helper.IntegerTokenConverter
+ch.qos.logback.core.rolling.helper.LiteralPathPart
 ch.qos.logback.core.rolling.helper.MonoTypedConverter
+ch.qos.logback.core.rolling.helper.PathPart
 ch.qos.logback.core.rolling.helper.PeriodicityType
+ch.qos.logback.core.rolling.helper.RegexPathPart
 ch.qos.logback.core.rolling.helper.RenameUtil
 ch.qos.logback.core.rolling.helper.RollingCalendar
 ch.qos.logback.core.rolling.helper.RollingCalendar$1
 ch.qos.logback.core.rolling.helper.SizeAndTimeBasedArchiveRemover
 ch.qos.logback.core.rolling.helper.TimeBasedArchiveRemover
+ch.qos.logback.core.rolling.helper.TimeBasedArchiveRemover$1
+ch.qos.logback.core.rolling.helper.TimeBasedArchiveRemover$ArchiveRemoverRunnable
 ch.qos.logback.core.rolling.helper.TokenConverter
 ch.qos.logback.core.sift.AbstractAppenderFactoryUsingJoran:
     public java.util.List getEventList()
@@ -7006,7 +6965,6 @@ ch.qos.logback.core.spi.ContextAwareImpl:
     public void addInfo(java.lang.String,java.lang.Throwable)
     public void addWarn(java.lang.String)
 ch.qos.logback.core.spi.CyclicBufferTracker
-ch.qos.logback.core.spi.DeferredProcessingAware
 ch.qos.logback.core.spi.FilterAttachable
 ch.qos.logback.core.spi.FilterAttachableImpl:
     public void addFilter(ch.qos.logback.core.filter.Filter)
@@ -7018,12 +6976,11 @@ ch.qos.logback.core.spi.PropertyContainer:
 ch.qos.logback.core.status.InfoStatus:
     public InfoStatus(java.lang.String,java.lang.Object,java.lang.Throwable)
 ch.qos.logback.core.status.NopStatusListener
-ch.qos.logback.core.status.OnConsoleStatusListener:
-    public bridge synthetic long getRetrospective()
-    public bridge synthetic void setRetrospective(long)
 ch.qos.logback.core.status.OnErrorConsoleStatusListener
 ch.qos.logback.core.status.OnPrintStreamStatusListenerBase:
     static final long DEFAULT_RETROSPECTIVE
+    public java.lang.String getPrefix()
+    public void setPrefix(java.lang.String)
     public void setRetrospective(long)
     public long getRetrospective()
 ch.qos.logback.core.status.Status:
@@ -7039,6 +6996,7 @@ ch.qos.logback.core.status.StatusBase:
 ch.qos.logback.core.status.StatusListenerAsList
 ch.qos.logback.core.status.StatusManager:
     public abstract int getCount()
+    public abstract boolean addUniquely(ch.qos.logback.core.status.StatusListener,java.lang.Object)
     public abstract void clear()
 ch.qos.logback.core.status.StatusUtil:
     public StatusUtil(ch.qos.logback.core.status.StatusManager)
@@ -7047,6 +7005,7 @@ ch.qos.logback.core.status.StatusUtil:
     public void addWarn(java.lang.Object,java.lang.String)
     public void addError(java.lang.Object,java.lang.String,java.lang.Throwable)
     public boolean isErrorFree(long)
+    public boolean isWarningOrErrorFree(long)
     public boolean containsMatch(int,java.lang.String)
     public boolean containsMatch(java.lang.String)
     public int matchCount(java.lang.String)
@@ -7060,9 +7019,16 @@ ch.qos.logback.core.subst.NodeToStringTransformer:
     public NodeToStringTransformer(ch.qos.logback.core.subst.Node,ch.qos.logback.core.spi.PropertyContainer)
 ch.qos.logback.core.util.CharSequenceState
 ch.qos.logback.core.util.CharSequenceToRegexMapper
-ch.qos.logback.core.util.CloseUtil
+ch.qos.logback.core.util.CloseUtil:
+    public CloseUtil()
+    public static void closeQuietly(java.net.Socket)
+    public static void closeQuietly(java.net.ServerSocket)
 ch.qos.logback.core.util.ContentTypeUtil
+ch.qos.logback.core.util.ContextUtil:
+    public static java.util.Map getFilenameCollisionMap(ch.qos.logback.core.Context)
+    public static java.util.Map getFilenamePatternCollisionMap(ch.qos.logback.core.Context)
 ch.qos.logback.core.util.DatePatternToRegexUtil
+ch.qos.logback.core.util.DefaultInvocationGate
 ch.qos.logback.core.util.DelayStrategy
 ch.qos.logback.core.util.Duration:
     private static final java.lang.String DOUBLE_PART
@@ -7075,15 +7041,16 @@ ch.qos.logback.core.util.Duration:
     static final long DAYS_COEFFICIENT
     public static ch.qos.logback.core.util.Duration buildUnbounded()
 ch.qos.logback.core.util.EnvUtil:
-    public EnvUtil()
-    public static boolean isJDK6OrHigher()
+    private EnvUtil()
+    public static boolean isAndroidOS()
     public static boolean isJDK7OrHigher()
-    public static boolean isWindows()
 ch.qos.logback.core.util.ExecutorServiceUtil:
     public ExecutorServiceUtil()
+    public static java.util.concurrent.ExecutorService newExecutorService()
 ch.qos.logback.core.util.FileSize
 ch.qos.logback.core.util.FileUtil
 ch.qos.logback.core.util.FixedDelay
+ch.qos.logback.core.util.InterruptUtil
 ch.qos.logback.core.util.InvocationGate
 ch.qos.logback.core.util.Loader:
     static final java.lang.String TSTR
@@ -7105,6 +7072,8 @@ ch.qos.logback.core.util.OptionHelper:
     public static java.lang.String substVars(java.lang.String,ch.qos.logback.core.spi.PropertyContainer)
     public static java.lang.String propertyLookup(java.lang.String,ch.qos.logback.core.spi.PropertyContainer,ch.qos.logback.core.spi.PropertyContainer)
     public static java.util.Properties getSystemProperties()
+ch.qos.logback.core.util.StatusListenerConfigHelper:
+    public StatusListenerConfigHelper()
 ch.qos.logback.core.util.StatusPrinter:
     public StatusPrinter()
     public static void setPrintStream(java.io.PrintStream)
@@ -8687,84 +8656,6 @@ com.crashlytics.android.core.internal.models.ThreadData$FrameData:
     46:47:public ThreadData$FrameData(long,int)
     50:51:public ThreadData$FrameData(long,java.lang.String,int)
     53:59:public ThreadData$FrameData(long,java.lang.String,java.lang.String,long,int)
-com.evgenii.jsevaluator.JsEvaluator:
-    public static final java.lang.String JS_NAMESPACE
-    private static final java.lang.String JS_ERROR_PREFIX
-    70:71:public void evaluate(java.lang.String)
-    84:85:public void destroy()
-    89:89:public android.webkit.WebView getWebView()
-    120:121:public void setHandler(com.evgenii.jsevaluator.interfaces.HandlerWrapperInterface)
-    125:126:public void setWebViewWrapper(com.evgenii.jsevaluator.interfaces.WebViewWrapperInterface)
-    130:130:public com.evgenii.jsevaluator.interfaces.JsCallback getCallback()
-com.evgenii.jsevaluator.JsFunctionCallFormatter:
-    3:3:public JsFunctionCallFormatter()
-com.evgenii.jsevaluator.WebViewWrapper:
-    49:65:public void destroy()
-    69:69:public android.webkit.WebView getWebView()
-com.evgenii.jsevaluator.interfaces.JsEvaluatorInterface
-com.evgenii.jsevaluator.interfaces.WebViewWrapperInterface:
-    public abstract void destroy()
-    public abstract android.webkit.WebView getWebView()
-com.github.jparkie.promise.Action:
-    public abstract void call(com.github.jparkie.promise.Promise)
-    public abstract void cancel()
-com.github.jparkie.promise.Function
-com.github.jparkie.promise.Promise:
-    public abstract boolean isCancelled()
-    public abstract boolean isDone()
-    public abstract boolean isSuccessful()
-    public abstract void cancel()
-    public abstract boolean await(long,java.util.concurrent.TimeUnit)
-    public abstract com.github.jparkie.promise.Promise then(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Function)
-    public abstract void then(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Action)
-com.github.jparkie.promise.Promises:
-    14:15:private Promises()
-    27:42:public static com.github.jparkie.promise.Promise create(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Action)
-    61:63:public static com.github.jparkie.promise.Promise value(java.lang.Object)
-    73:75:public static com.github.jparkie.promise.Promise error(java.lang.Throwable)
-com.github.jparkie.promise.Promises$1:
-    final synthetic com.github.jparkie.promise.Action val$onScheduleAction
-    28:28:Promises$1(com.github.jparkie.promise.Action)
-    32:32:public void call(com.github.jparkie.promise.Promise)
-    36:37:public void cancel()
-com.github.jparkie.promise.Promises$DefaultPromise:
-    104:104:public boolean isSuccessful()
-    109:122:public void cancel()
-    131:131:public boolean await(long,java.util.concurrent.TimeUnit)
-    208:215:public com.github.jparkie.promise.Promise then(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Function)
-    220:232:public void then(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Action)
-com.github.jparkie.promise.Promises$DefaultPromise$ActionContext:
-    238:241:private Promises$DefaultPromise$ActionContext(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Action)
-    234:234:synthetic Promises$DefaultPromise$ActionContext(com.github.jparkie.promise.Scheduler,com.github.jparkie.promise.Action,com.github.jparkie.promise.Promises$1)
-com.github.jparkie.promise.Promises$DefaultPromise$FunctionAction
-com.github.jparkie.promise.Promises$DefaultPromise$FunctionAction$1
-com.github.jparkie.promise.Scheduler:
-    public abstract void cancel(com.github.jparkie.promise.Action)
-com.github.jparkie.promise.Schedulers
-com.github.jparkie.promise.Schedulers$1
-com.github.jparkie.promise.Schedulers$ExecutorServiceScheduler
-com.github.jparkie.promise.Schedulers$ExecutorServiceScheduler$1
-com.github.jparkie.promise.Schedulers$ExecutorServiceScheduler$2
-com.github.jparkie.promise.Schedulers$SimpleScheduler
-com.github.jparkie.promise.actions.OnCallAction
-com.github.jparkie.promise.actions.OnCancelAction
-com.github.jparkie.promise.actions.OnCompleteAction
-com.github.jparkie.promise.actions.OnFailureAction
-com.github.jparkie.promise.actions.OnSuccessAction
-com.github.jparkie.promise.extras.ExtraPromises
-com.github.jparkie.promise.extras.ExtraPromises$1
-com.github.jparkie.promise.extras.ExtraPromises$2
-com.github.jparkie.promise.extras.ExtraPromises$3
-com.github.jparkie.promise.extras.ExtraPromises$4
-com.github.jparkie.promise.extras.Pair
-com.github.jparkie.promise.functions.FallbackFunction
-com.github.jparkie.promise.functions.FilterFunction
-com.github.jparkie.promise.functions.FlatMapFunction
-com.github.jparkie.promise.functions.MapFunction
-com.github.jparkie.promise.functions.RecoverFunction
-com.github.jparkie.promise.functions.TransformFunction
-com.github.tony19.apktool.lib.BuildConfig
-com.github.tony19.apktool.lib.R
 com.github.tony19.logback.android.R
 com.google.ads.AdRequest:
     public static final java.lang.String VERSION
@@ -12095,7 +11986,6 @@ com.google.android.gms.common.FirstPartyScopes
 com.google.android.gms.common.GoogleApiAvailability:
     public static final java.lang.String GOOGLE_PLAY_SERVICES_PACKAGE
     3:13:public com.google.android.gms.tasks.Task makeGooglePlayServicesAvailable(android.app.Activity)
-    14:14:public android.app.Dialog getErrorDialog(android.app.Activity,int,int)
     19:19:public boolean showErrorDialogFragment(android.app.Activity,int,int)
     38:40:public void showErrorNotification(android.content.Context,com.google.android.gms.common.ConnectionResult)
     71:82:public varargs com.google.android.gms.tasks.Task checkApiAvailability(com.google.android.gms.common.api.GoogleApi,com.google.android.gms.common.api.GoogleApi[])
@@ -12169,8 +12059,6 @@ com.google.android.gms.common.api.CommonStatusCodes:
 com.google.android.gms.common.api.DataBufferResponse
 com.google.android.gms.common.api.GoogleApi:
     15:16:public GoogleApi(android.content.Context,com.google.android.gms.common.api.Api,com.google.android.gms.common.api.Api$ApiOptions,android.os.Looper,com.google.android.gms.common.api.internal.StatusExceptionMapper)
-    17:33:public GoogleApi(android.app.Activity,com.google.android.gms.common.api.Api,com.google.android.gms.common.api.Api$ApiOptions,com.google.android.gms.common.api.GoogleApi$Settings)
-    49:52:public GoogleApi(android.app.Activity,com.google.android.gms.common.api.Api,com.google.android.gms.common.api.Api$ApiOptions,com.google.android.gms.common.api.internal.StatusExceptionMapper)
     64:64:public com.google.android.gms.tasks.Task doWrite(com.google.android.gms.common.api.internal.TaskApiCall)
     65:65:public com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl doBestEffortWrite(com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl)
     66:66:public com.google.android.gms.tasks.Task doBestEffortWrite(com.google.android.gms.common.api.internal.TaskApiCall)
@@ -12178,8 +12066,6 @@ com.google.android.gms.common.api.GoogleApi:
     89:89:public com.google.android.gms.common.api.internal.ListenerHolder registerListener(java.lang.Object,java.lang.String)
     90:90:protected com.google.android.gms.tasks.Task disconnectService()
     96:96:public com.google.android.gms.common.api.Api$ApiOptions getApiOptions()
-com.google.android.gms.common.api.GoogleApi$Settings$Builder:
-    5:7:public com.google.android.gms.common.api.GoogleApi$Settings$Builder setLooper(android.os.Looper)
 com.google.android.gms.common.api.GoogleApiClient:
     public static final java.lang.String DEFAULT_ACCOUNT
     public static final int SIGN_IN_MODE_REQUIRED
@@ -12269,15 +12155,14 @@ com.google.android.gms.common.api.internal.GoogleServices:
     38:40:final com.google.android.gms.common.api.Status checkGoogleAppId(java.lang.String)
     49:50:public static boolean isMeasurementEnabled()
     53:55:static void clearInstanceForTest()
-com.google.android.gms.common.api.internal.IStatusCallback
-com.google.android.gms.common.api.internal.IStatusCallback$Stub
+com.google.android.gms.common.api.internal.IStatusCallback$Stub:
+    3:8:public static com.google.android.gms.common.api.internal.IStatusCallback asInterface(android.os.IBinder)
 com.google.android.gms.common.api.internal.IStatusCallback$Stub$zaa
 com.google.android.gms.common.api.internal.LifecycleActivity:
     5:6:public LifecycleActivity(android.content.ContextWrapper)
     8:8:public boolean isChimera()
     12:12:public java.lang.Object asObject()
 com.google.android.gms.common.api.internal.LifecycleCallback:
-    7:7:public static com.google.android.gms.common.api.internal.LifecycleFragment getFragment(android.app.Activity)
     8:8:public static com.google.android.gms.common.api.internal.LifecycleFragment getFragment(android.content.ContextWrapper)
 com.google.android.gms.common.api.internal.LifecycleFragment:
     public abstract boolean isCreated()
@@ -12293,7 +12178,6 @@ com.google.android.gms.common.api.internal.RegisterListenerMethod:
 com.google.android.gms.common.api.internal.RegistrationMethods
 com.google.android.gms.common.api.internal.RegistrationMethods$Builder
 com.google.android.gms.common.api.internal.RemoteCall
-com.google.android.gms.common.api.internal.StatusCallback
 com.google.android.gms.common.api.internal.StatusPendingResult:
     3:4:public StatusPendingResult(android.os.Looper)
 com.google.android.gms.common.api.internal.TaskApiCall:
@@ -12305,9 +12189,6 @@ com.google.android.gms.common.api.internal.TaskUtil:
     1:1:public TaskUtil()
 com.google.android.gms.common.api.internal.zaa
 com.google.android.gms.common.api.internal.zaa$zaa
-com.google.android.gms.common.api.internal.zaae:
-    1:11:public static void zaa(android.app.Activity,com.google.android.gms.common.api.internal.GoogleApiManager,com.google.android.gms.common.api.internal.zai)
-    12:15:private zaae(com.google.android.gms.common.api.internal.LifecycleFragment)
 com.google.android.gms.common.api.internal.zaaf:
     1:4:public zaaf(com.google.android.gms.common.api.internal.zai)
 com.google.android.gms.common.api.internal.zaag:
@@ -12630,7 +12511,6 @@ com.google.android.gms.common.internal.safeparcel.SafeParcelableSerializer:
     28:28:public static java.lang.String serializeToString(com.google.android.gms.common.internal.safeparcel.SafeParcelable)
     29:29:public static com.google.android.gms.common.internal.safeparcel.SafeParcelable deserializeFromString(java.lang.String,android.os.Parcelable$Creator)
     30:31:public static void serializeToIntentExtra(com.google.android.gms.common.internal.safeparcel.SafeParcelable,android.content.Intent,java.lang.String)
-    32:35:public static com.google.android.gms.common.internal.safeparcel.SafeParcelable deserializeFromIntentExtra(android.content.Intent,java.lang.String,android.os.Parcelable$Creator)
     36:41:public static void serializeIterableToIntentExtra(java.lang.Iterable,android.content.Intent,java.lang.String)
 com.google.android.gms.common.internal.service.Common:
     1:1:public Common()
@@ -14075,14 +13955,10 @@ com.google.android.gms.internal.identity.zzh
 com.google.android.gms.internal.identity.zzi
 com.google.android.gms.internal.identity.zzj
 com.google.android.gms.internal.location.zzao:
-    public abstract void zza(com.google.android.gms.location.ActivityTransitionRequest,android.app.PendingIntent,com.google.android.gms.common.api.internal.IStatusCallback)
-    public abstract void zza(android.app.PendingIntent,com.google.android.gms.common.api.internal.IStatusCallback)
     public abstract void zza(android.location.Location)
     public abstract void zza(com.google.android.gms.internal.location.zzaj)
     public abstract com.google.android.gms.location.LocationAvailability zzb(java.lang.String)
 com.google.android.gms.internal.location.zzap:
-    public final void zza(com.google.android.gms.location.ActivityTransitionRequest,android.app.PendingIntent,com.google.android.gms.common.api.internal.IStatusCallback)
-    public final void zza(android.app.PendingIntent,com.google.android.gms.common.api.internal.IStatusCallback)
     public final void zza(android.location.Location)
     public final void zza(com.google.android.gms.internal.location.zzaj)
     public final com.google.android.gms.location.LocationAvailability zzb(java.lang.String)
@@ -14091,24 +13967,19 @@ com.google.android.gms.internal.location.zzas:
     public final void zza(android.location.Location)
     public final void zza(com.google.android.gms.internal.location.zzaj)
 com.google.android.gms.internal.location.zzaz:
-    public final void zza(com.google.android.gms.location.ActivityTransitionRequest,android.app.PendingIntent,com.google.android.gms.common.api.internal.BaseImplementation$ResultHolder)
-    public final void zza(android.app.PendingIntent,com.google.android.gms.common.api.internal.BaseImplementation$ResultHolder)
     public final com.google.android.gms.location.LocationAvailability zza()
     public final void zza(boolean)
     public final void zza(android.location.Location)
     public final void zza(com.google.android.gms.internal.location.zzaj)
-com.google.android.gms.internal.location.zze:
-    public final com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.ActivityTransitionRequest,android.app.PendingIntent)
-    public final com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,android.app.PendingIntent)
-com.google.android.gms.internal.location.zzh
-com.google.android.gms.internal.location.zzi
 com.google.android.gms.internal.location.zzq:
     public final com.google.android.gms.location.LocationAvailability getLocationAvailability(com.google.android.gms.common.api.GoogleApiClient)
+    public final com.google.android.gms.common.api.PendingResult requestLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationListener)
     public final com.google.android.gms.common.api.PendingResult requestLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationCallback,android.os.Looper)
     public final com.google.android.gms.common.api.PendingResult removeLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationCallback)
     public final com.google.android.gms.common.api.PendingResult setMockMode(com.google.android.gms.common.api.GoogleApiClient,boolean)
     public final com.google.android.gms.common.api.PendingResult setMockLocation(com.google.android.gms.common.api.GoogleApiClient,android.location.Location)
     public final com.google.android.gms.common.api.PendingResult flushLocations(com.google.android.gms.common.api.GoogleApiClient)
+com.google.android.gms.internal.location.zzr
 com.google.android.gms.internal.location.zzs
 com.google.android.gms.internal.location.zzt
 com.google.android.gms.internal.location.zzu
@@ -14374,24 +14245,22 @@ com.google.android.gms.location.ActivityRecognition:
     public static final java.lang.String CLIENT_NAME
     private ActivityRecognition()
     public static com.google.android.gms.location.ActivityRecognitionClient getClient(android.app.Activity)
-    public static com.google.android.gms.location.ActivityRecognitionClient getClient(android.content.Context)
-com.google.android.gms.location.ActivityRecognitionApi:
-    public abstract com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.ActivityTransitionRequest,android.app.PendingIntent)
-    public abstract com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,android.app.PendingIntent)
-com.google.android.gms.location.ActivityRecognitionClient
+com.google.android.gms.location.ActivityRecognitionClient:
+    public ActivityRecognitionClient(android.app.Activity)
 com.google.android.gms.location.ActivityRecognitionResult:
     public ActivityRecognitionResult(java.util.List,long,long)
     public ActivityRecognitionResult(com.google.android.gms.location.DetectedActivity,long,long)
     private ActivityRecognitionResult(com.google.android.gms.location.DetectedActivity,long,long,int,android.os.Bundle)
     public int getActivityConfidence(int)
+    public java.util.List getProbableActivities()
     public long getTime()
     public long getElapsedRealtimeMillis()
-com.google.android.gms.location.ActivityTransition
-com.google.android.gms.location.ActivityTransition$Builder
+com.google.android.gms.location.ActivityTransition:
+    public static final int ACTIVITY_TRANSITION_ENTER
+    public static final int ACTIVITY_TRANSITION_EXIT
 com.google.android.gms.location.ActivityTransition$SupportedActivityTransition
-com.google.android.gms.location.ActivityTransitionEvent
-com.google.android.gms.location.ActivityTransitionRequest
-com.google.android.gms.location.ActivityTransitionResult
+com.google.android.gms.location.ActivityTransitionRequest:
+    public void serializeToIntentExtra(android.content.Intent)
 com.google.android.gms.location.DetectedActivity:
     public static final int IN_VEHICLE
     public static final int ON_BICYCLE
@@ -14401,11 +14270,11 @@ com.google.android.gms.location.DetectedActivity:
     public static final int TILTING
     public static final int WALKING
     public static final int RUNNING
-    public static void zzb(int)
 com.google.android.gms.location.FusedLocationProviderApi:
     public static final java.lang.String KEY_LOCATION_CHANGED
     public static final java.lang.String KEY_MOCK_LOCATION
     public abstract com.google.android.gms.location.LocationAvailability getLocationAvailability(com.google.android.gms.common.api.GoogleApiClient)
+    public abstract com.google.android.gms.common.api.PendingResult requestLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationListener)
     public abstract com.google.android.gms.common.api.PendingResult requestLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationCallback,android.os.Looper)
     public abstract com.google.android.gms.common.api.PendingResult removeLocationUpdates(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.location.LocationCallback)
     public abstract com.google.android.gms.common.api.PendingResult setMockMode(com.google.android.gms.common.api.GoogleApiClient,boolean)
@@ -14425,19 +14294,14 @@ com.google.android.gms.location.Geofence:
     public static final long NEVER_EXPIRE
 com.google.android.gms.location.Geofence$Builder:
     public final com.google.android.gms.location.Geofence$Builder setNotificationResponsiveness(int)
-    public final com.google.android.gms.location.Geofence$Builder setLoiteringDelay(int)
 com.google.android.gms.location.GeofenceStatusCodes
 com.google.android.gms.location.GeofencingClient:
     public GeofencingClient(android.app.Activity)
-    public com.google.android.gms.tasks.Task removeGeofences(java.util.List)
 com.google.android.gms.location.GeofencingRequest:
     public static final int INITIAL_TRIGGER_ENTER
     public static final int INITIAL_TRIGGER_EXIT
     public static final int INITIAL_TRIGGER_DWELL
     public java.util.List getGeofences()
-com.google.android.gms.location.LocationAvailability:
-    public static boolean hasLocationAvailability(android.content.Intent)
-    public static com.google.android.gms.location.LocationAvailability extractLocationAvailability(android.content.Intent)
 com.google.android.gms.location.LocationRequest:
     public static final int PRIORITY_HIGH_ACCURACY
     public static final int PRIORITY_BALANCED_POWER_ACCURACY
@@ -14447,17 +14311,14 @@ com.google.android.gms.location.LocationRequest:
     public final long getInterval()
     public final long getFastestInterval()
     public final boolean isFastestIntervalExplicitlySet()
-    public final com.google.android.gms.location.LocationRequest setExpirationDuration(long)
     public final com.google.android.gms.location.LocationRequest setExpirationTime(long)
     public final long getExpirationTime()
     public final int getNumUpdates()
-    public final float getSmallestDisplacement()
 com.google.android.gms.location.LocationResult:
     public static com.google.android.gms.location.LocationResult create(java.util.List)
 com.google.android.gms.location.LocationServices:
     private LocationServices()
     public static com.google.android.gms.location.GeofencingClient getGeofencingClient(android.app.Activity)
-    public static com.google.android.gms.location.SettingsClient getSettingsClient(android.app.Activity)
     public static com.google.android.gms.location.FusedLocationProviderClient getFusedLocationProviderClient(android.app.Activity)
 com.google.android.gms.location.LocationSettingsRequest$Builder:
     public final com.google.android.gms.location.LocationSettingsRequest$Builder addAllLocationRequests(java.util.Collection)
@@ -14467,7 +14328,6 @@ com.google.android.gms.location.LocationSettingsResponse:
 com.google.android.gms.location.LocationSettingsStates:
     public final boolean isLocationUsable()
     public final boolean isLocationPresent()
-    public static com.google.android.gms.location.LocationSettingsStates fromIntent(android.content.Intent)
 com.google.android.gms.location.LocationSettingsStatusCodes
 com.google.android.gms.location.LocationStatusCodes:
     public static final int SUCCESS
@@ -14477,15 +14337,8 @@ com.google.android.gms.location.LocationStatusCodes:
     public static final int GEOFENCE_TOO_MANY_PENDING_INTENTS
     private LocationStatusCodes()
 com.google.android.gms.location.R
-com.google.android.gms.location.SettingsClient:
-    public SettingsClient(android.app.Activity)
 com.google.android.gms.location.places.PlaceReport
 com.google.android.gms.location.places.zza
-com.google.android.gms.location.zzc
-com.google.android.gms.location.zzd
-com.google.android.gms.location.zze
-com.google.android.gms.location.zzf
-com.google.android.gms.location.zzg
 com.google.android.gms.location.zzm
 com.google.android.gms.maps.CameraUpdateFactory:
     1:1:private CameraUpdateFactory()
@@ -16542,248 +16395,12 @@ com.intentfilter.androidpermissions.R$id
 com.intentfilter.androidpermissions.R$integer
 com.intentfilter.androidpermissions.R$layout
 com.intentfilter.androidpermissions.R$string:
-    742:742:private R$string()
+    780:780:private R$string()
 com.intentfilter.androidpermissions.R$style
 com.intentfilter.androidpermissions.R$styleable
 com.intentfilter.androidpermissions.services.BroadcastService$IntentAction
 com.intentfilter.androidpermissions.services.NotificationService:
     private static final java.lang.String CHANNEL_ID
-com.iodine.start.ArrayUtil:
-    20:20:public ArrayUtil()
-    54:69:public static java.lang.Object[] toArray(org.json.JSONArray)
-    73:100:public static java.lang.Object[] toArray(com.facebook.react.bridge.ReadableArray)
-com.iodine.start.MapUtil:
-    22:22:public MapUtil()
-    59:76:public static java.util.Map toMap(org.json.JSONObject)
-    80:109:public static java.util.Map toMap(com.facebook.react.bridge.ReadableMap)
-com.marianhello.backgroundgeolocation.BuildConfig
-com.marianhello.backgroundgeolocation.R
-com.marianhello.backgroundgeolocation.R$anim
-com.marianhello.backgroundgeolocation.R$attr
-com.marianhello.backgroundgeolocation.R$bool
-com.marianhello.backgroundgeolocation.R$color
-com.marianhello.backgroundgeolocation.R$dimen
-com.marianhello.backgroundgeolocation.R$drawable
-com.marianhello.backgroundgeolocation.R$id
-com.marianhello.backgroundgeolocation.R$integer
-com.marianhello.backgroundgeolocation.R$layout
-com.marianhello.backgroundgeolocation.R$mipmap
-com.marianhello.backgroundgeolocation.R$string
-com.marianhello.backgroundgeolocation.R$style
-com.marianhello.backgroundgeolocation.R$styleable
-com.marianhello.backgroundgeolocation.R$xml
-com.marianhello.bgloc.BackgroundGeolocationFacade:
-    public static final int SERVICE_STARTED
-    public static final int SERVICE_STOPPED
-    public static final int AUTHORIZATION_AUTHORIZED
-    public static final int AUTHORIZATION_DENIED
-    336:337:public void sendCommand(int)
-    383:384:public java.util.Collection getLogEntries(int)
-    503:504:public static void setLocationTransform(com.marianhello.bgloc.service.LocationTransform)
-    507:507:public static com.marianhello.bgloc.service.LocationTransform getLocationTransform()
-com.marianhello.bgloc.Config:
-    public static final java.lang.String BUNDLE_KEY
-    public static final int DISTANCE_FILTER_PROVIDER
-    public static final int ACTIVITY_PROVIDER
-    public static final int RAW_PROVIDER
-    216:217:public void setStationaryRadius(double)
-    555:558:public android.os.Parcel toParcel()
-    562:564:public android.os.Bundle toBundle()
-    647:650:public static com.marianhello.bgloc.Config fromByteArray(byte[])
-com.marianhello.bgloc.HttpPostService:
-    public static final int BUFFER_SIZE
-    36:38:public HttpPostService(java.net.HttpURLConnection)
-    48:53:public int postJSON(org.json.JSONObject,java.util.Map)
-    155:156:public static int postJSON(java.lang.String,org.json.JSONObject,java.util.Map)
-com.marianhello.bgloc.NotificationHelper:
-    public static final java.lang.String SERVICE_CHANNEL_ID
-    public static final java.lang.String ANDROID_PERMISSIONS_CHANNEL_ID
-    public static final java.lang.String SYNC_CHANNEL_ID
-    public static final java.lang.String SYNC_CHANNEL_NAME
-    public static final java.lang.String SYNC_CHANNEL_DESCRIPTION
-    17:17:public NotificationHelper()
-com.marianhello.bgloc.PluginException:
-    public static final int PERMISSION_DENIED_ERROR
-    public static final int SETTINGS_ERROR
-    public static final int CONFIGURE_ERROR
-    public static final int SERVICE_ERROR
-    public static final int JSON_ERROR
-com.marianhello.bgloc.ResourceResolver:
-    private static final java.lang.String RESOURCE_PREFIX
-    private static final java.lang.String ACCOUNT_NAME_RESOURCE
-    private static final java.lang.String ACCOUNT_TYPE_RESOURCE
-    private static final java.lang.String AUTHORITY_TYPE_RESOURCE
-com.marianhello.bgloc.data.AbstractLocationTemplate:
-    public static final java.lang.String BUNDLE_KEY
-com.marianhello.bgloc.data.ArrayListLocationTemplate:
-    42:42:public java.util.Iterator iterator()
-    46:46:public boolean containsKey(java.lang.String)
-    51:51:public boolean isEmpty()
-com.marianhello.bgloc.data.BackgroundActivity:
-    68:69:public void setConfidence(int)
-    76:77:public void setType(int)
-com.marianhello.bgloc.data.BackgroundLocation:
-    public static final int DELETED
-    public static final int POST_PENDING
-    public static final int SYNC_PENDING
-    private static final long TWO_MINUTES_IN_NANOS
-    23:51:public BackgroundLocation(java.lang.String)
-    76:78:public BackgroundLocation(java.lang.Integer,android.location.Location,float)
-    240:240:public com.marianhello.bgloc.data.BackgroundLocation makeClone()
-    282:282:public java.lang.Long getBatchStartMillis()
-    392:392:public long getElapsedRealtimeNanos()
-    401:402:public void setElapsedRealtimeNanos(long)
-    575:575:public int getMockFlags()
-    648:648:public int getStatus()
-    679:679:public android.os.Bundle getExtras()
-    687:688:public void setExtras(android.os.Bundle)
-    696:709:public android.location.Location getLocation()
-    720:769:public static boolean isBetterLocation(com.marianhello.bgloc.data.BackgroundLocation,com.marianhello.bgloc.data.BackgroundLocation)
-    778:781:public boolean isBetterLocationThan(android.location.Location)
-    790:793:public boolean isBetterLocationThan(com.marianhello.bgloc.data.BackgroundLocation)
-    798:801:private static boolean isSameProvider(java.lang.String,java.lang.String)
-    871:873:public org.json.JSONObject toJSONObjectWithId()
-com.marianhello.bgloc.data.DAOFactory:
-    9:9:public DAOFactory()
-com.marianhello.bgloc.data.HashMapLocationTemplate:
-    40:40:public java.util.Iterator iterator()
-    44:44:public boolean containsKey(java.lang.String)
-    48:48:public java.lang.String get(java.lang.String)
-    53:53:public boolean isEmpty()
-com.marianhello.bgloc.data.LocationDAO:
-    public abstract com.marianhello.bgloc.data.BackgroundLocation getLocationById(long)
-    public abstract com.marianhello.bgloc.data.BackgroundLocation getFirstUnpostedLocation()
-    public abstract com.marianhello.bgloc.data.BackgroundLocation getNextUnpostedLocation(long)
-    public abstract long getUnpostedLocationsCount()
-    public abstract long persistLocation(com.marianhello.bgloc.data.BackgroundLocation,int)
-    public abstract long persistLocationForSync(com.marianhello.bgloc.data.BackgroundLocation,int)
-    public abstract com.marianhello.bgloc.data.BackgroundLocation deleteFirstUnpostedLocation()
-com.marianhello.bgloc.data.LocationTemplate:
-    public abstract boolean isEmpty()
-com.marianhello.bgloc.data.LocationTemplateFactory:
-    18:18:public LocationTemplateFactory()
-    43:43:public static com.marianhello.bgloc.data.LocationTemplate fromHashMap(java.util.HashMap)
-    47:47:public static com.marianhello.bgloc.data.LocationTemplate fromArrayList(java.util.ArrayList)
-com.marianhello.bgloc.data.provider.ContentProviderLocationDAO:
-    84:107:public com.marianhello.bgloc.data.BackgroundLocation getLocationById(long)
-    112:122:public int getLocationsCount()
-    127:159:public com.marianhello.bgloc.data.BackgroundLocation getFirstUnpostedLocation()
-    164:197:public com.marianhello.bgloc.data.BackgroundLocation getNextUnpostedLocation(long)
-    202:214:public long getUnpostedLocationsCount()
-    242:263:public android.net.Uri getOldestLocationUri()
-    282:326:public long persistLocation(com.marianhello.bgloc.data.BackgroundLocation,int)
-    331:344:public long persistLocationForSync(com.marianhello.bgloc.data.BackgroundLocation,int)
-    366:369:public com.marianhello.bgloc.data.BackgroundLocation deleteFirstUnpostedLocation()
-com.marianhello.bgloc.data.provider.LocationContentProvider:
-    private static final int ALL_ITEMS
-    private static final int ONE_ITEM
-com.marianhello.bgloc.data.sqlite.SQLiteConfigurationContract
-com.marianhello.bgloc.data.sqlite.SQLiteConfigurationContract$ConfigurationEntry
-com.marianhello.bgloc.data.sqlite.SQLiteConfigurationDAO:
-    27:29:public SQLiteConfigurationDAO(android.database.sqlite.SQLiteDatabase)
-com.marianhello.bgloc.data.sqlite.SQLiteLocationContract
-com.marianhello.bgloc.data.sqlite.SQLiteLocationContract$LocationEntry
-com.marianhello.bgloc.data.sqlite.SQLiteLocationDAO
-com.marianhello.bgloc.data.sqlite.SQLiteOpenHelper:
-    public static final java.lang.String SQLITE_DATABASE_NAME
-    public static final int DATABASE_VERSION
-    public static final java.lang.String TEXT_TYPE
-    public static final java.lang.String INTEGER_TYPE
-    public static final java.lang.String REAL_TYPE
-    public static final java.lang.String COMMA_SEP
-com.marianhello.bgloc.provider.ActivityRecognitionLocationProvider:
-    private static final java.lang.String P_NAME
-    private static final java.lang.String DETECTED_ACTIVITY_UPDATE
-com.marianhello.bgloc.provider.LocationProvider:
-    public static final int CMD_SWITCH_MODE
-    public static final int BACKGROUND_MODE
-    public static final int FOREGROUND_MODE
-com.marianhello.bgloc.react.BackgroundGeolocationModule$ErrorMap:
-    50:50:public BackgroundGeolocationModule$ErrorMap()
-    52:55:public static com.facebook.react.bridge.ReadableMap from(java.lang.String,int)
-com.marianhello.bgloc.react.BackgroundGeolocationPackage:
-    24:24:public java.util.List createJSModules()
-com.marianhello.bgloc.react.BuildConfig
-com.marianhello.bgloc.react.ConfigMapper:
-    27:27:public ConfigMapper()
-com.marianhello.bgloc.react.R
-com.marianhello.bgloc.react.R$anim
-com.marianhello.bgloc.react.R$attr
-com.marianhello.bgloc.react.R$bool
-com.marianhello.bgloc.react.R$color
-com.marianhello.bgloc.react.R$dimen
-com.marianhello.bgloc.react.R$drawable
-com.marianhello.bgloc.react.R$id
-com.marianhello.bgloc.react.R$integer
-com.marianhello.bgloc.react.R$layout
-com.marianhello.bgloc.react.R$mipmap
-com.marianhello.bgloc.react.R$string
-com.marianhello.bgloc.react.R$style
-com.marianhello.bgloc.react.R$styleable
-com.marianhello.bgloc.react.R$xml
-com.marianhello.bgloc.react.data.LocationMapper:
-    12:12:public LocationMapper()
-com.marianhello.bgloc.service.CommandId
-com.marianhello.bgloc.service.LocationServiceImpl:
-    public static final java.lang.String ACTION_BROADCAST
-    public static final int MSG_ON_ERROR
-    public static final int MSG_ON_LOCATION
-    public static final int MSG_ON_STATIONARY
-    public static final int MSG_ON_ACTIVITY
-    public static final int MSG_ON_SERVICE_STARTED
-    public static final int MSG_ON_SERVICE_STOPPED
-    public static final int MSG_ON_ABORT_REQUESTED
-    public static final int MSG_ON_HTTP_AUTHORIZATION
-    649:650:public static void setLocationProviderFactory(com.marianhello.bgloc.provider.LocationProviderFactory)
-    711:711:public long getServiceId()
-    715:716:public boolean isBound()
-    724:725:public static void setLocationTransform(com.marianhello.bgloc.service.LocationTransform)
-    728:728:public static com.marianhello.bgloc.service.LocationTransform getLocationTransform()
-com.marianhello.bgloc.service.LocationServiceImpl$LocalBinder:
-    667:667:public com.marianhello.bgloc.service.LocationServiceImpl getService()
-com.marianhello.bgloc.service.LocationServiceInfo:
-    public abstract boolean isBound()
-com.marianhello.bgloc.service.LocationServiceInfoImpl:
-    24:28:public boolean isBound()
-com.marianhello.bgloc.service.LocationServiceIntentBuilder:
-    private static final java.lang.String KEY_MESSAGE
-    private static final java.lang.String KEY_COMMAND
-    131:131:public static com.marianhello.bgloc.service.LocationServiceIntentBuilder getInstance(android.content.Context)
-    139:140:public com.marianhello.bgloc.service.LocationServiceIntentBuilder setMessage(java.lang.String)
-com.marianhello.bgloc.service.LocationServiceIntentBuilder$Command:
-    private static final java.lang.String KEY_COMMAND_ID
-    private static final java.lang.String KEY_COMMAND_ARGUMENT
-    private static final java.lang.String KEY_COMMAND_ARGUMENT_TYPE
-    private static final int ARGUMENT_TYPE_MISSING
-    private static final int ARGUMENT_TYPE_STRING
-    private static final int ARGUMENT_TYPE_PARCELABLE
-com.marianhello.bgloc.service.LocationServiceProxy:
-    109:110:public boolean isBound()
-com.marianhello.bgloc.sync.AccountHelper:
-    10:10:public AccountHelper()
-com.marianhello.bgloc.sync.BatchManager:
-    133:133:public java.io.File createBatch(java.lang.Long,java.lang.Integer)
-com.marianhello.bgloc.sync.SyncAdapter:
-    private static final int NOTIFICATION_ID
-com.marianhello.logging.DBLogReader:
-    public static final java.lang.String DB_FILENAME
-com.marianhello.logging.LogEntry:
-    86:97:public org.json.JSONObject toJSONObject()
-com.marianhello.logging.LoggerManager:
-    public static final java.lang.String SQLITE_APPENDER_NAME
-    17:17:public LoggerManager()
-    59:65:public static void disableDBLogging()
-com.marianhello.utils.CloneHelper:
-    6:6:public CloneHelper()
-com.marianhello.utils.Convert:
-    18:18:public Convert()
-com.marianhello.utils.TextUtils
-com.marianhello.utils.ToneGenerator$Tone
-com.mindprod.ledatastream.LEDataInputStream:
-    private static final java.lang.String EMBEDDED_COPYRIGHT
-    public static java.lang.String readUTF(java.io.DataInput)
-    public final void close()
-    public final int read(byte[],int,int)
 com.raizlabs.android.dbflow.BuildConfig
 com.raizlabs.android.dbflow.R
 com.raizlabs.android.dbflow.SQLiteCompatibilityUtils:
@@ -17579,17 +17196,6 @@ com.squareup.picasso.Utils$BitmapHoneycombMR1:
     416:416:private Utils$BitmapHoneycombMR1()
 com.squareup.picasso.Utils$OkHttpLoaderCreator:
     422:422:private Utils$OkHttpLoaderCreator()
-com.tenforwardconsulting.bgloc.DistanceFilterLocationProvider:
-    private static final java.lang.String P_NAME
-    private static final java.lang.String STATIONARY_REGION_ACTION
-    private static final java.lang.String STATIONARY_ALARM_ACTION
-    private static final java.lang.String SINGLE_LOCATION_UPDATE_ACTION
-    private static final java.lang.String STATIONARY_LOCATION_MONITOR_ACTION
-    private static final long STATIONARY_TIMEOUT
-    private static final long STATIONARY_LOCATION_POLLING_INTERVAL_LAZY
-    private static final long STATIONARY_LOCATION_POLLING_INTERVAL_AGGRESSIVE
-    private static final int MAX_STATIONARY_ACQUISITION_ATTEMPTS
-    private static final int MAX_SPEED_ACQUISITION_ATTEMPTS
 com.theartofdev.edmodo.cropper.BitmapCroppingWorkerTask:
     166:166:public android.net.Uri getUri()
 com.theartofdev.edmodo.cropper.BitmapUtils:
@@ -17667,6 +17273,811 @@ com.theartofdev.edmodo.cropper.R$string:
 com.theartofdev.edmodo.cropper.R$style
 com.theartofdev.edmodo.cropper.R$styleable:
     1213:1213:private R$styleable()
+com.transistorsoft.locationmanager.Constants
+com.transistorsoft.locationmanager.Constants$Text
+com.transistorsoft.locationmanager.a.a:
+    public a()
+com.transistorsoft.locationmanager.activity.TSLocationManagerActivity:
+    public static final int LOCATION_SETTINGS_REQUEST_CODE
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation:
+    public static final int FORCE_RELOAD_LOCATION_CHANGE
+    public static final int FORCE_RELOAD_MOTION_CHANGE
+    public static final int FORCE_RELOAD_GEOFENCE
+    public static final int FORCE_RELOAD_HEARTBEAT
+    public static final int FORCE_RELOAD_SCHEDULE
+    public static final int FORCE_RELOAD_BOOT
+    private static android.media.ToneGenerator f
+    private android.app.Activity n
+    public static long deltaT(java.lang.String)
+    public static java.lang.String getBroadcastAction(java.lang.String)
+    public void setActivity(android.app.Activity)
+    public android.app.Activity getActivity()
+    public void registerPlugin(int)
+    public void start()
+    public void startGeofences()
+    public void stop()
+    public void changePace(boolean)
+    public void sync()
+    public void persistLocation(com.transistorsoft.locationmanager.location.TSLocation)
+    public void getCount(com.transistorsoft.locationmanager.adapter.callback.TSGetCountCallback)
+    public void addGeofence(com.transistorsoft.locationmanager.geofence.TSGeofence)
+    public void addGeofences(java.util.List)
+    public void removeGeofence(java.lang.String)
+    public void removeGeofences(java.util.List)
+    public void removeGeofences(com.transistorsoft.locationmanager.adapter.callback.TSCallback)
+    public void removeGeofences()
+    public void geofenceExists(java.lang.String,com.transistorsoft.locationmanager.adapter.callback.TSGeofenceExistsCallback)
+    public org.json.JSONArray getLocations()
+    public java.lang.String getLog()
+    public void destroyLog()
+    public void clearDatabase(com.transistorsoft.locationmanager.adapter.callback.TSCallback)
+    public void destroyLocations()
+    public com.transistorsoft.locationmanager.util.Sensors getSensors()
+    public void startTone(int)
+    public void onSecurityException(com.transistorsoft.locationmanager.adapter.callback.TSSecurityExceptionCallback)
+    public java.lang.Object removeListener(java.lang.String,java.lang.Object)
+    private void a(com.transistorsoft.locationmanager.adapter.callback.TSSecurityExceptionCallback)
+    public void _onTemplateError(com.transistorsoft.locationmanager.event.TemplateErrorEvent)
+    public void _onSettingsFailure(com.transistorsoft.locationmanager.event.SettingsFailureEvent)
+    public void _onScheduleEvent(com.transistorsoft.locationmanager.scheduler.ScheduleEvent)
+    public void _onActivityTransitionEvent(com.google.android.gms.location.ActivityTransitionEvent)
+    public void _onLocationChange(com.transistorsoft.locationmanager.location.TSLocation)
+    public void _onLocationProviderChange(com.transistorsoft.locationmanager.event.LocationProviderChangeEvent)
+    public void onConnectivityChange(com.transistorsoft.locationmanager.event.ConnectivityChangeEvent)
+    public void onPowerSaveModeChange(com.transistorsoft.locationmanager.event.PowerSaveModeChangeEvent)
+    public void _onLocationError(com.transistorsoft.locationmanager.event.LocationErrorEvent)
+    public void _onGeofenceEvent(com.transistorsoft.locationmanager.event.GeofenceEvent)
+    public void _onSecurityException(com.transistorsoft.locationmanager.event.SecurityExceptionEvent)
+    public void _onHttpResponse(com.transistorsoft.locationmanager.http.HttpResponse)
+    public void _onHeartbeat(com.transistorsoft.locationmanager.event.HeartbeatEvent)
+    public void _onMotionChange(com.transistorsoft.locationmanager.event.MotionChangeEvent)
+    public void onActivityResumed()
+    public void onActivityStopped()
+    private void g()
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$10
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$11
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$14
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$15
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$2
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$3
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$31
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$33
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$7
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$8
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$9
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$ChangePaceTask:
+    public java.lang.Boolean a()
+    public com.transistorsoft.locationmanager.adapter.callback.TSCallback b()
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$b
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$b$1
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$f:
+    private java.lang.String d
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$g
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$i:
+    private void a(java.lang.String)
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$i$2
+com.transistorsoft.locationmanager.adapter.BackgroundGeolocation$j:
+    BackgroundGeolocation$j(com.transistorsoft.locationmanager.adapter.BackgroundGeolocation)
+com.transistorsoft.locationmanager.adapter.TSConfig:
+    public static final int TRACKING_MODE_GEOFENCE
+    public static final int TRACKING_MODE_LOCATION
+    public static final float DEFAULT_DISTANCE_FILTER
+    public static final int DEFAULT_DESIRED_ACCURACY
+    public static final long DEFAULT_LOCATION_UPDATE_INTERVAL
+    public static final long DEFAULT_FASTEST_LOCATION_UPDATE_INTERVAL
+    public static final long DEFAULT_GEOFENCE_PROXIMITY_RADIUS
+    public static final boolean DEFAULT_GEOFENCE_INITIAL_TRIGGER_ENTRY
+    public static final int DEFAULT_LOCATION_TIMEOUT
+    public static final boolean DEFAULT_DISABLE_ELASTICITY
+    public static final float DEFAULT_ELASTICITY_MULTIPLIER
+    public static final long DEFAULT_DEFER_TIME
+    public static final int DEFAULT_STATIONARY_RADIUS
+    public static final int MINIMUM_STATIONARY_RADIUS
+    public static final long DEFAULT_STOP_TIMEOUT
+    public static final float DEFAULT_DESIRED_ODOMETER_ACCURACY
+    public static final boolean DEFAULT_ALLOW_IDENTICAL_LOCATIONS
+    public static final int DEFAULT_SPEED_JUMP_FILTER
+    public static final long DEFAULT_ACTIVITY_RECOGNITION_INTERVAL
+    public static final int DEFAULT_MINIMUM_ACTIVITY_RECOGNITION_CONFIDENCE
+    public static final boolean DEFAULT_DISABLE_STOP_DETECTION
+    public static final int DEFAULT_STOP_AFTER_ELAPSED_MINUTES
+    public static final boolean DEFAULT_STOP_ON_STATIONARY
+    public static final int DEFAULT_MAX_DAYS_TO_PERSIST
+    public static final int DEFAULT_MAX_RECORDS_TO_PERSIST
+    public static final boolean DEFAULT_AUTO_SYNC
+    public static final boolean DEFAULT_BATCH_SYNC
+    public static final int DEFAULT_MAX_BATCH_SIZE
+    public static final int DEFAULT_HTTP_TIMEOUT
+    public static final boolean DEFAULT_DEBUG
+    public static final boolean DEFAULT_STOP_ON_TERMINATE
+    public static final boolean DEFAULT_START_ON_BOOT
+    public static final boolean DEFAULT_FORCE_RELOAD
+    public static final int DEFAULT_HEARTBEAT_INTERVAL
+    public static final boolean DEFAULT_FOREGROUND_SERVICE
+    public static final int DEFAULT_LOG_LEVEL
+    public static final int DEFAULT_LOG_MAX_DAYS
+    public static final int PERSIST_MODE_ALL
+    public static final int PERSIST_MODE_NONE
+    public static final int PERSIST_MODE_LOCATION
+    public static final int PERSIST_MODE_GEOFENCE
+    public boolean removeListener(java.lang.String,com.transistorsoft.locationmanager.adapter.TSConfig$OnChangeCallback)
+    public void removeListeners()
+    public java.lang.Float getElasticityMultiplier()
+    public java.lang.Long getActivityRecognitionInterval()
+    public java.lang.Integer getMinimumActivityRecognitionConfidence()
+    public java.lang.String getTriggerActivities()
+    public java.lang.Boolean getForceReloadOnMotionChange()
+    public java.lang.Boolean getForceReloadOnGeofence()
+    public java.lang.Boolean getForceReloadOnHeartbeat()
+    public java.lang.Boolean getForceReloadOnSchedule()
+    public boolean hasHeadlessJobService()
+    public void setPluginForEvent(int,java.lang.String)
+com.transistorsoft.locationmanager.adapter.TSConfig$Builder:
+    private void a(java.util.List)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDistanceFilter(java.lang.Float)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDesiredAccuracy(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDesiredOdometerAccuracy(java.lang.Float)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLocationUpdateInterval(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setFastestLocationUpdateInterval(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLocationTimeout(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDeferTime(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDisableElasticity(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setElasticityMultiplier(java.lang.Float)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setAllowIdenticalLocations(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setActivityRecognitionInterval(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setMinimumActivityRecognitionConfidence(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setTriggerActivities(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDisableStopDetection(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStationaryRadius(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStopTimeout(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStopOnStationary(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setEnableTimestampMeta(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setSpeedJumpFilter(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setUseSignificantChangesOnly(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLocationAuthorizationRequest(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDisableLocationAuthorizationAlert(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setPersist(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setPersistMode(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setMaxDaysToPersist(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setMaxRecordsToPersist(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setUrl(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setMethod(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setAutoSync(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setAutoSyncThreshold(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setBatchSync(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setMaxBatchSize(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setParams(org.json.JSONObject)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setHeader(java.lang.String,java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setHeaders(org.json.JSONObject)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setExtras(org.json.JSONObject)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setHttpRootProperty(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLocationTemplate(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setGeofenceTemplate(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLocationsOrderDirection(java.lang.String)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setHttpTimeout(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setGeofenceProximityRadius(java.lang.Long)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setGeofenceInitialTriggerEntry(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setGeofenceModeHighAccuracy(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStopOnTerminate(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStartOnBoot(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setStopAfterElapsedMinutes(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnLocationChange(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnMotionChange(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnGeofence(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnBoot(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnHeartbeat(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForceReloadOnSchedule(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setHeartbeatInterval(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setForegroundService(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setNotification(com.transistorsoft.locationmanager.adapter.TSConfig$Notification)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setSchedule(java.util.List)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setScheduleUseAlarmManager(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setEnableHeadless(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setDebug(java.lang.Boolean)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLogLevel(java.lang.Integer)
+    public com.transistorsoft.locationmanager.adapter.TSConfig$Builder setLogMaxDays(java.lang.Integer)
+    private java.lang.Integer a(java.lang.String,java.lang.Integer,java.lang.Integer)
+    private java.lang.Long a(java.lang.String,java.lang.Long,java.lang.Long)
+    private java.lang.Double a(java.lang.String,java.lang.Double,java.lang.Double)
+    private java.lang.Float a(java.lang.String,java.lang.Float,java.lang.Float)
+    private org.json.JSONObject a(java.lang.String,org.json.JSONObject,org.json.JSONObject)
+    private org.json.JSONArray a(java.lang.String,org.json.JSONArray,org.json.JSONArray)
+    private java.util.List a(java.lang.String,java.util.List,java.util.List)
+    private java.util.Map a(java.lang.String,java.util.Map,java.util.Map)
+    static synthetic java.lang.Long v(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+    static synthetic java.lang.Integer w(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+    static synthetic java.lang.Boolean aa(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+    static synthetic java.lang.Boolean ab(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+    static synthetic java.lang.Boolean ad(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+    static synthetic java.lang.Boolean ae(com.transistorsoft.locationmanager.adapter.TSConfig$Builder)
+com.transistorsoft.locationmanager.adapter.TSConfig$Notification:
+    public boolean update(com.transistorsoft.locationmanager.adapter.TSConfig$Notification)
+    public void setLayout(java.lang.String)
+    public void setTitle(java.lang.String)
+    public void setText(java.lang.String)
+    public void setColor(java.lang.String)
+    public void setPriority(java.lang.Integer)
+    public void setChannelName(java.lang.String)
+    public void setSmallIcon(java.lang.String)
+    public void setLargeIcon(java.lang.String)
+    public java.lang.String getString(java.lang.String)
+    public java.util.Map toMap()
+    public boolean equals(com.transistorsoft.locationmanager.adapter.TSConfig$Notification)
+com.transistorsoft.locationmanager.adapter.TSConfig$a:
+    java.util.List a()
+    void a(java.lang.String)
+    void b()
+com.transistorsoft.locationmanager.adapter.callback.TSConfigureCallback
+com.transistorsoft.locationmanager.adapter.callback.TSConnectivityChangeCallback:
+    public abstract void onConnectivityChange(com.transistorsoft.locationmanager.event.ConnectivityChangeEvent)
+com.transistorsoft.locationmanager.adapter.callback.TSGeofenceExistsCallback
+com.transistorsoft.locationmanager.adapter.callback.TSGetCountCallback
+com.transistorsoft.locationmanager.adapter.callback.TSGetGeofencesCallback:
+    public abstract void onFailure(java.lang.String)
+com.transistorsoft.locationmanager.adapter.callback.TSGetLocationsCallback:
+    public abstract void onFailure(java.lang.Integer)
+com.transistorsoft.locationmanager.adapter.callback.TSHttpResponseCallback:
+    public abstract void onHttpResponse(com.transistorsoft.locationmanager.http.HttpResponse)
+com.transistorsoft.locationmanager.adapter.callback.TSPowerSaveChangeCallback:
+    public abstract void onPowerSaveChange(java.lang.Boolean)
+com.transistorsoft.locationmanager.adapter.callback.TSSecurityExceptionCallback
+com.transistorsoft.locationmanager.b.a:
+    public static final int a
+    public void a(android.content.Context,int)
+com.transistorsoft.locationmanager.c.a
+com.transistorsoft.locationmanager.c.b:
+    private static android.content.SharedPreferences br
+    public static final int h
+    public static final long i
+    public static final long j
+    public static final long k
+    public static final boolean l
+    public static final boolean n
+    public static final long p
+    public static final int q
+    public static final long s
+    public static final float t
+    public static final long v
+    public static final int w
+    public static final boolean y
+    public static final int z
+    public static final boolean A
+    public static final int B
+    public static final int C
+    public static final boolean F
+    public static final boolean H
+    public static final int I
+    public static final boolean O
+    public static final boolean P
+    public static final boolean Q
+    public static final boolean R
+    public static final int S
+    public static final boolean T
+    public static final int aa
+    public static final int ab
+    public static java.lang.Boolean ac
+    public static java.lang.Boolean ad
+    public static java.lang.String ae
+    public static java.lang.Boolean af
+    public static java.lang.Float ag
+    public static java.lang.Float ah
+    public static java.lang.Integer ai
+    public static java.lang.Float aj
+    public static java.lang.Long ak
+    public static java.lang.Long al
+    public static java.lang.Integer am
+    public static java.lang.Long an
+    public static java.lang.Boolean ao
+    public static java.lang.Float ap
+    public static java.lang.Boolean aq
+    public static java.lang.Long ar
+    public static java.lang.Integer as
+    public static java.util.ArrayList at
+    public static java.lang.Boolean au
+    public static java.lang.Integer av
+    public static java.lang.Long aw
+    public static java.lang.Boolean ax
+    public static java.lang.Boolean ay
+    public static java.lang.Integer az
+    public static java.lang.Integer aA
+    public static java.lang.String aB
+    public static java.lang.String aC
+    public static java.lang.Boolean aD
+    public static java.lang.Integer aE
+    public static java.lang.Boolean aF
+    public static java.lang.Integer aG
+    public static org.json.JSONObject aH
+    public static org.json.JSONObject aI
+    public static org.json.JSONObject aJ
+    public static java.lang.String aK
+    public static java.lang.String aL
+    public static java.lang.String aM
+    public static java.lang.String aN
+    public static java.lang.Integer aO
+    public static java.lang.Long aP
+    public static java.lang.Boolean aQ
+    public static java.lang.Boolean aR
+    public static java.lang.Boolean aS
+    public static java.lang.Integer aT
+    public static java.lang.Boolean aU
+    public static java.lang.Boolean aV
+    public static java.lang.Boolean aW
+    public static java.lang.Boolean aX
+    public static java.lang.Boolean aY
+    public static java.lang.Boolean aZ
+    public static java.lang.Integer ba
+    public static java.lang.Boolean bb
+    public static java.lang.Integer bc
+    public static java.lang.String bd
+    public static java.lang.String be
+    public static java.lang.String bf
+    public static java.lang.String bg
+    public static java.lang.String bh
+    public static java.lang.String bi
+    public static org.json.JSONArray bj
+    public static java.lang.String bk
+    public static java.lang.Boolean bl
+    public static java.lang.String bm
+    public static java.lang.Integer bn
+    public b()
+    private static void b()
+    public static boolean a()
+    private static void c()
+    private static void a(org.json.JSONObject)
+    private static java.lang.Boolean a(java.lang.String)
+    private static void d()
+    private static org.json.JSONObject e()
+    private static java.lang.Float f()
+    private static void a(java.lang.Float)
+    private static float a(float)
+    private static java.lang.Integer g()
+    private static float h()
+    private static int i()
+    private static int j()
+    private static long k()
+    private static void a(long)
+    private static boolean l()
+    private static boolean m()
+    private static boolean n()
+    private static void a(boolean)
+    private static boolean o()
+    private static void b(boolean)
+    private static void b(java.lang.String)
+    private static java.lang.String p()
+    private static boolean q()
+    private static boolean r()
+    private static float s()
+    private static float t()
+    private static void b(float)
+    private static boolean u()
+    private static java.lang.String v()
+    private static void c(java.lang.String)
+    private static org.json.JSONObject w()
+    private static org.json.JSONObject x()
+    private static org.json.JSONObject y()
+    private static java.lang.String z()
+    private static java.lang.String A()
+    private static java.lang.String B()
+    private static java.lang.String C()
+    private static void c(boolean)
+    private static boolean D()
+    private static boolean E()
+    private static java.lang.Integer F()
+    private static boolean G()
+    private static int H()
+    private static java.lang.String I()
+    private static java.lang.Integer J()
+    private static int K()
+    private static void a(java.lang.Boolean)
+    private static boolean L()
+    private static boolean M()
+    private static boolean N()
+    private static long O()
+    private static long P()
+    private static long Q()
+    private static long R()
+    private static java.lang.Integer S()
+    private static java.lang.Integer T()
+    private static void a(java.lang.Integer)
+    private static boolean U()
+    private static boolean V()
+    private static boolean W()
+    private static boolean X()
+    private static boolean Y()
+    private static boolean Z()
+    private static boolean aa()
+    private static java.lang.Integer ab()
+    private static java.lang.Integer ac()
+    private static java.util.ArrayList ad()
+    private static org.json.JSONArray ae()
+    private static long af()
+    private static boolean ag()
+    private static java.lang.Integer ah()
+    private static java.lang.String ai()
+    private static java.lang.String aj()
+    private static java.lang.String ak()
+    private static java.lang.String al()
+    private static java.lang.String am()
+    private static java.lang.String an()
+    private static boolean ao()
+    private static java.lang.Integer ap()
+    private static boolean aq()
+    private static java.lang.Integer ar()
+    private static boolean as()
+    private static java.lang.String at()
+    private static java.lang.String au()
+    private static java.lang.Integer av()
+    private static boolean c(android.content.Context)
+    private static void d(android.content.Context)
+    private static void aw()
+    private static boolean e(android.content.Context)
+    private static java.lang.String f(android.content.Context)
+    private static boolean g(android.content.Context)
+    private static void a(java.lang.String,java.lang.String)
+    private static java.lang.Integer b(java.lang.Integer)
+    private static java.util.ArrayList d(java.lang.String)
+    private static java.lang.Integer c(java.lang.Integer)
+    private static java.lang.Object a(org.json.JSONObject,com.transistorsoft.locationmanager.c.a)
+    private static java.lang.Object a(java.lang.Object,com.transistorsoft.locationmanager.c.a)
+    private static void b(java.lang.Object,com.transistorsoft.locationmanager.c.a)
+    private static java.lang.Object a(com.transistorsoft.locationmanager.c.a)
+    private static void a(java.lang.Object,com.transistorsoft.locationmanager.c.a,android.content.SharedPreferences$Editor)
+com.transistorsoft.locationmanager.d.a
+com.transistorsoft.locationmanager.d.a$1
+com.transistorsoft.locationmanager.d.a$2
+com.transistorsoft.locationmanager.data.LocationDAO:
+    public abstract java.util.List all()
+    public abstract java.util.List allWithLocking(java.lang.Integer)
+    public abstract com.transistorsoft.locationmanager.data.LocationModel first()
+    public abstract boolean unlock(com.transistorsoft.locationmanager.data.LocationModel)
+    public abstract boolean unlock()
+    public abstract boolean unlock(java.util.List)
+    public abstract java.lang.String persist(org.json.JSONObject)
+    public abstract boolean persist(com.transistorsoft.locationmanager.location.TSLocation)
+    public abstract boolean destroy(com.transistorsoft.locationmanager.data.LocationModel)
+    public abstract void destroyAll(java.util.List)
+    public abstract void prune(int)
+    public abstract boolean clear()
+    public abstract int count()
+    public abstract void close()
+com.transistorsoft.locationmanager.data.LocationModel:
+    public java.lang.Boolean unlock()
+    public java.lang.Boolean destroy()
+    public java.lang.Integer getId()
+    public java.lang.String getTimestamp()
+com.transistorsoft.locationmanager.data.sqlite.GeofenceDAO:
+    public java.util.List getErrors()
+    public boolean create(com.transistorsoft.locationmanager.geofence.TSGeofence)
+    public java.util.List find(java.util.List)
+    public boolean exists(java.util.List)
+com.transistorsoft.locationmanager.data.sqlite.a:
+    private static final int e
+com.transistorsoft.locationmanager.data.sqlite.b:
+    public void close()
+com.transistorsoft.locationmanager.device.DeviceSettingsRequest:
+    public DeviceSettingsRequest(java.lang.String)
+    public java.lang.String getAction()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.ActivityChangeEvent:
+    public com.google.android.gms.location.ActivityTransitionEvent getDetectedActivity()
+    public java.lang.String getActivityName()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.BatteryOptimizationEvent
+com.transistorsoft.locationmanager.event.BootEvent:
+    android.content.Context getContext()
+com.transistorsoft.locationmanager.event.ConfigChangeEvent:
+    public boolean isDirty(java.lang.String)
+    public android.content.Context getContext()
+com.transistorsoft.locationmanager.event.ConnectivityChangeEvent:
+    public boolean hasConnection()
+    public android.net.Network getNetwork()
+    public java.util.Map toMap()
+    public org.json.JSONObject toJson()
+com.transistorsoft.locationmanager.event.GeofenceEvent:
+    public com.transistorsoft.locationmanager.geofence.TSGeofence getGeofence()
+    public com.google.android.gms.location.GeofencingEvent getGeofencingEvent()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.GeofencesChangeEvent:
+    public java.util.List getActivatedGeofences()
+    public java.util.List getDeactivatedGeofences()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.GooglePlayServicesConnectedEvent
+com.transistorsoft.locationmanager.event.HeadlessEvent:
+    public java.lang.Object getEvent()
+    public org.json.JSONObject getBootEvent()
+    public org.json.JSONObject getTerminateEvent()
+    public com.transistorsoft.locationmanager.location.TSLocation getLocationEvent()
+    public com.transistorsoft.locationmanager.event.MotionChangeEvent getMotionChangeEvent()
+    public com.transistorsoft.locationmanager.event.GeofenceEvent getGeofenceEvent()
+    public com.transistorsoft.locationmanager.event.GeofencesChangeEvent getGeofencesChangeEvent()
+    public com.transistorsoft.locationmanager.event.ActivityChangeEvent getActivityChangeEvent()
+    public org.json.JSONObject getScheduleEvent()
+    public com.transistorsoft.locationmanager.http.HttpResponse getHttpEvent()
+    public com.transistorsoft.locationmanager.event.HeartbeatEvent getHeartbeatEvent()
+    public com.transistorsoft.locationmanager.event.LocationProviderChangeEvent getProviderChangeEvent()
+    public com.transistorsoft.locationmanager.event.PowerSaveModeChangeEvent getPowerSaveChangeEvent()
+    public com.transistorsoft.locationmanager.event.ConnectivityChangeEvent getConnectivityChangeEvent()
+    public java.lang.Boolean getEnabledChangeEvent()
+    public java.lang.String getNotificationEvent()
+com.transistorsoft.locationmanager.event.HeartbeatEvent:
+    public com.transistorsoft.locationmanager.location.TSLocation getLocation()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.LocationErrorEvent:
+    public LocationErrorEvent(java.lang.Integer,java.lang.String)
+com.transistorsoft.locationmanager.event.LocationProviderChangeEvent:
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.event.MotionChangeEvent:
+    public org.json.JSONObject json
+    public java.lang.Boolean isMoving
+    public java.lang.Boolean getIsMoving()
+    public org.json.JSONObject toJson()
+com.transistorsoft.locationmanager.event.PersistEvent:
+    public com.transistorsoft.locationmanager.location.TSLocation getLocation()
+    public org.json.JSONObject getParams()
+    public android.content.Context getContext()
+com.transistorsoft.locationmanager.event.PowerSaveModeChangeEvent:
+    public java.lang.Boolean isPowerSaveMode()
+com.transistorsoft.locationmanager.event.SettingsFailureEvent
+com.transistorsoft.locationmanager.event.StartedEvent
+com.transistorsoft.locationmanager.event.StopDetectionEvent
+com.transistorsoft.locationmanager.event.StopServiceEvent
+com.transistorsoft.locationmanager.event.TemplateErrorEvent:
+    public java.lang.String getTemplateName()
+    public java.lang.Exception getError()
+com.transistorsoft.locationmanager.geofence.TSGeofence:
+    public int getNoificationResponsiveness()
+    public java.util.Map toMap()
+com.transistorsoft.locationmanager.geofence.TSGeofence$Builder:
+    public com.transistorsoft.locationmanager.geofence.TSGeofence$Builder setNotificationResponsiveness(int)
+com.transistorsoft.locationmanager.geofence.TSGeofenceManager:
+    private static final int a
+    public static final float MINIMUM_STATIONARY_RADIUS
+    private java.lang.String e
+    public void _onBootEvent(com.transistorsoft.locationmanager.event.BootEvent)
+    public void onConfigChange(com.transistorsoft.locationmanager.event.ConfigChangeEvent)
+    public void onProviderChangeEvent(com.transistorsoft.locationmanager.event.LocationProviderChangeEvent)
+    public java.lang.Object removeListener(java.lang.String,java.lang.Object)
+    public void geofenceExists(java.lang.String,com.transistorsoft.locationmanager.adapter.callback.TSGeofenceExistsCallback)
+    public void destroy()
+com.transistorsoft.locationmanager.geofence.TSGeofenceManager$c
+com.transistorsoft.locationmanager.http.HttpResponse:
+    public int getStatus()
+    public java.lang.String getResponseText()
+    public org.json.JSONObject toJson()
+com.transistorsoft.locationmanager.http.HttpService:
+    public void onConfigChange(com.transistorsoft.locationmanager.event.ConfigChangeEvent)
+    public void destroy()
+com.transistorsoft.locationmanager.location.SingleLocationRequest:
+    public static final int ACTION_MOTION_CHANGE
+    public static final int ACTION_GET_CURRENT_POSITION
+    public static final int ACTION_PROVIDER_CHANGE
+    public static final int ACTION_GET_CURRENT_STATE
+    public static final int ACTION_WATCH_POSITION
+    private com.transistorsoft.locationmanager.adapter.callback.TSLocationCallback mOnCompleteCallback
+    public boolean didTimeout()
+    public int getSamples()
+com.transistorsoft.locationmanager.location.SingleLocationRequest$Builder:
+    public com.transistorsoft.locationmanager.location.SingleLocationRequest build()
+com.transistorsoft.locationmanager.location.TSCurrentPositionRequest:
+    public long getMaximumAge()
+com.transistorsoft.locationmanager.location.TSCurrentPositionRequest$Builder:
+    public bridge synthetic com.transistorsoft.locationmanager.location.SingleLocationRequest build()
+com.transistorsoft.locationmanager.location.TSLocation:
+    private com.google.android.gms.location.DetectedActivity detectedActivity
+    public java.lang.Object getJson()
+    public java.util.Map toMap()
+    public boolean isSample()
+    public java.lang.String getEvent()
+    public java.lang.String getGeofenceIdentifier()
+    public boolean hasGeofence()
+    public org.json.JSONObject getExtras()
+    public double getBatteryLevel()
+    public boolean getBatteryIsCharging()
+    public com.google.android.gms.location.DetectedActivity getDetectedActivity()
+    public java.lang.String getActivityName()
+    public int getActivityConfidence()
+com.transistorsoft.locationmanager.location.TSLocationManager:
+    public static final int LOCATION_ERROR_NOT_INITIALIZED
+    public static final int LOCATION_ERROR_UNKNOWN
+    public static final int LOCATION_ERROR_DENIED
+    public static final int LOCATION_ERROR_NETWORK
+    public static final int LOCATION_ERROR_MINIMUM_ACCURACY
+    public static final int LOCATION_ERROR_TRACKING_MODE_DISABLED
+    public static final int LOCATION_ERROR_TIMEOUT
+    public static final int LOCATION_ERROR_CANCELLED
+    private java.lang.Boolean locationServicesEnabled
+    public void destroy()
+    public android.location.Location getLastOdometerLocation()
+    public void onConfigChange(com.transistorsoft.locationmanager.event.ConfigChangeEvent)
+    public void onStopDetection(com.transistorsoft.locationmanager.event.StopDetectionEvent)
+    private void stopSingleLocationRequests()
+    public java.lang.Boolean isUpdatingLocation()
+    private void sendLocationErrorEvent(java.lang.Integer)
+com.transistorsoft.locationmanager.location.TSMotionChangeRequest$Builder:
+    public bridge synthetic com.transistorsoft.locationmanager.location.SingleLocationRequest build()
+com.transistorsoft.locationmanager.location.TSProviderChangeRequest$Builder:
+    public bridge synthetic com.transistorsoft.locationmanager.location.SingleLocationRequest build()
+com.transistorsoft.locationmanager.location.TSWatchPositionRequest:
+    private android.app.PendingIntent pendingIntent
+    public long getInterval()
+com.transistorsoft.locationmanager.location.TSWatchPositionRequest$Builder:
+    public bridge synthetic com.transistorsoft.locationmanager.location.SingleLocationRequest build()
+com.transistorsoft.locationmanager.logger.TSLog:
+    public TSLog()
+    public static java.lang.String pin(java.lang.String)
+    public static java.lang.String connectivity(java.lang.String)
+    private static java.lang.String decodeMaxHistory(int)
+com.transistorsoft.locationmanager.logger.TSLogReader:
+    public TSLogReader()
+com.transistorsoft.locationmanager.logger.TSMediaPlayer:
+    public void tickTock(android.content.Context,boolean)
+com.transistorsoft.locationmanager.logger.TSSQLiteAppender:
+    private static final int TIMESTMP_INDEX
+    private static final int FORMATTED_MESSAGE_INDEX
+    private static final int LOGGER_NAME_INDEX
+    private static final int LEVEL_STRING_INDEX
+    private static final int THREAD_NAME_INDEX
+    private static final int REFERENCE_FLAG_INDEX
+    private static final int ARG0_INDEX
+    private static final int CALLER_FILENAME_INDEX
+    private static final int CALLER_CLASS_INDEX
+    private static final int CALLER_METHOD_INDEX
+    private static final int CALLER_LINE_INDEX
+    private static final short PROPERTIES_EXIST
+    private static final short EXCEPTION_EXISTS
+    public void setDbNameResolver(ch.qos.logback.classic.db.names.DBNameResolver)
+    public java.lang.String getMaxHistory()
+    public long getMaxHistoryMs()
+    public void setFilename(java.lang.String)
+    public void setLogCleaner(ch.qos.logback.classic.android.SQLiteLogCleaner)
+com.transistorsoft.locationmanager.scheduler.ScheduleEvent:
+    public java.lang.Boolean getEnabled()
+com.transistorsoft.locationmanager.scheduler.TSScheduleManager:
+    public void onConfigChange(com.transistorsoft.locationmanager.event.ConfigChangeEvent)
+    public void restart(android.content.Context)
+    public void destroy()
+com.transistorsoft.locationmanager.service.ActivityRecognitionService:
+    public static boolean e()
+    public static boolean c(android.content.Context)
+com.transistorsoft.locationmanager.service.BackgroundTaskService:
+    public static void a(android.content.Context)
+com.transistorsoft.locationmanager.service.ForegroundNotification:
+    static final int a
+    public ForegroundNotification()
+com.transistorsoft.locationmanager.service.TrackingService:
+    public static void a(android.content.Context,com.transistorsoft.locationmanager.event.LocationProviderChangeEvent)
+    public void onActivityTransitionEvent(com.google.android.gms.location.ActivityTransitionEvent)
+    public void onStopAfterElapsedMinutesEvent(com.transistorsoft.locationmanager.event.StopAfterElapsedMinutesEvent)
+    public void onConfigChange(com.transistorsoft.locationmanager.event.ConfigChangeEvent)
+com.transistorsoft.locationmanager.util.Sensors:
+    public boolean hasGravity()
+    public boolean hasRotation()
+    public boolean hasStepCounter()
+    public boolean hasStepDetector()
+    public boolean hasAllActivityRecognitionSensors()
+com.transistorsoft.locationmanager.util.Util:
+    public Util()
+    public static java.lang.Integer getActivityId(java.lang.String)
+    public static java.util.Map toMap(org.json.JSONObject)
+    public static java.util.List toList(org.json.JSONArray)
+com.transistorsoft.locationmanager.util.a:
+    public a()
+    public static void a(android.content.Context,java.lang.String,org.json.JSONObject)
+    private static void b(android.content.Context,java.lang.String,org.json.JSONObject)
+    private static void c(android.content.Context,java.lang.String,org.json.JSONObject)
+    private static int a(java.lang.String,java.lang.String)
+com.transistorsoft.locationmanager.util.b:
+    public b()
+    private static boolean c(java.lang.String)
+com.transistorsoft.locationmanager.util.c:
+    private static final int d
+    private java.lang.String e
+com.transistorsoft.locationmanager.util.d:
+    private static java.lang.String a(java.lang.String)
+com.transistorsoft.rnbackgroundfetch.BuildConfig
+com.transistorsoft.rnbackgroundfetch.R
+com.transistorsoft.rnbackgroundfetch.R$anim
+com.transistorsoft.rnbackgroundfetch.R$attr
+com.transistorsoft.rnbackgroundfetch.R$bool
+com.transistorsoft.rnbackgroundfetch.R$color
+com.transistorsoft.rnbackgroundfetch.R$dimen
+com.transistorsoft.rnbackgroundfetch.R$drawable
+com.transistorsoft.rnbackgroundfetch.R$id
+com.transistorsoft.rnbackgroundfetch.R$integer
+com.transistorsoft.rnbackgroundfetch.R$layout
+com.transistorsoft.rnbackgroundfetch.R$string
+com.transistorsoft.rnbackgroundfetch.R$style
+com.transistorsoft.rnbackgroundfetch.R$styleable
+com.transistorsoft.rnbackgroundfetch.R$xml
+com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage:
+    22:22:public java.util.List createJSModules()
+com.transistorsoft.rnbackgroundgeolocation.BuildConfig
+com.transistorsoft.rnbackgroundgeolocation.HeadlessTask
+com.transistorsoft.rnbackgroundgeolocation.HeadlessTask$1
+com.transistorsoft.rnbackgroundgeolocation.HeadlessTask$1$1
+com.transistorsoft.rnbackgroundgeolocation.HeadlessTask$2
+com.transistorsoft.rnbackgroundgeolocation.R
+com.transistorsoft.rnbackgroundgeolocation.R$anim
+com.transistorsoft.rnbackgroundgeolocation.R$attr
+com.transistorsoft.rnbackgroundgeolocation.R$bool
+com.transistorsoft.rnbackgroundgeolocation.R$color
+com.transistorsoft.rnbackgroundgeolocation.R$dimen
+com.transistorsoft.rnbackgroundgeolocation.R$drawable
+com.transistorsoft.rnbackgroundgeolocation.R$id
+com.transistorsoft.rnbackgroundgeolocation.R$integer
+com.transistorsoft.rnbackgroundgeolocation.R$layout
+com.transistorsoft.rnbackgroundgeolocation.R$string
+com.transistorsoft.rnbackgroundgeolocation.R$style
+com.transistorsoft.rnbackgroundgeolocation.R$styleable
+com.transistorsoft.rnbackgroundgeolocation.R$xml
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation:
+    26:26:public java.util.List createJSModules()
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocationModule$20:
+    699:699:public void onFailure(java.lang.String)
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocationModule$7:
+    446:446:public void onFailure(java.lang.Integer)
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocationModule$ConnectivityChangeCallback:
+    189:192:public void onConnectivityChange(com.transistorsoft.locationmanager.event.ConnectivityChangeEvent)
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocationModule$HttpResponseCallback:
+    258:263:public void onHttpResponse(com.transistorsoft.locationmanager.http.HttpResponse)
+com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocationModule$PowerSaveChangeCallack:
+    284:285:public void onPowerSaveChange(java.lang.Boolean)
+com.transistorsoft.tsbackgroundfetch.BackgroundFetch:
+    public static final java.lang.String TAG
+    public static final java.lang.String ACTION_CONFIGURE
+    public static final java.lang.String ACTION_START
+    public static final java.lang.String ACTION_STOP
+    public static final java.lang.String ACTION_FINISH
+    public static final java.lang.String ACTION_STATUS
+    public static final java.lang.String ACTION_FORCE_RELOAD
+    public static final java.lang.String EVENT_FETCH
+    public static final int STATUS_AVAILABLE
+com.transistorsoft.tsbackgroundfetch.BackgroundFetchConfig:
+    private static final int MINIMUM_FETCH_INTERVAL
+    public static final java.lang.String FIELD_MINIMUM_FETCH_INTERVAL
+    public static final java.lang.String FIELD_START_ON_BOOT
+    public static final java.lang.String FIELD_FORCE_RELOAD
+    public static final java.lang.String FIELD_REQUIRED_NETWORK_TYPE
+    public static final java.lang.String FIELD_REQUIRES_BATTERY_NOT_LOW
+    public static final java.lang.String FIELD_REQUIRES_CHARGING
+    public static final java.lang.String FIELD_REQUIRES_DEVICE_IDLE
+    public static final java.lang.String FIELD_REQUIRES_STORAGE_NOT_LOW
+    public static final java.lang.String FIELD_STOP_ON_TERMINATE
+    public static final java.lang.String FIELD_JOB_SERVICE
+com.transistorsoft.tsbackgroundfetch.BuildConfig
+com.transistorsoft.tsbackgroundfetch.R
+com.transistorsoft.tsbackgroundfetch.R$anim
+com.transistorsoft.tsbackgroundfetch.R$attr
+com.transistorsoft.tsbackgroundfetch.R$bool
+com.transistorsoft.tsbackgroundfetch.R$color
+com.transistorsoft.tsbackgroundfetch.R$dimen
+com.transistorsoft.tsbackgroundfetch.R$drawable
+com.transistorsoft.tsbackgroundfetch.R$id
+com.transistorsoft.tsbackgroundfetch.R$integer
+com.transistorsoft.tsbackgroundfetch.R$layout
+com.transistorsoft.tsbackgroundfetch.R$string
+com.transistorsoft.tsbackgroundfetch.R$style
+com.transistorsoft.tsbackgroundfetch.R$styleable
+com.transistorsoft.tslocationmanager.Application:
+    public Application()
+com.transistorsoft.tslocationmanager.Application$Application
+com.transistorsoft.tslocationmanager.R:
+    10:10:private R()
+com.transistorsoft.tslocationmanager.R$anim
+com.transistorsoft.tslocationmanager.R$attr
+com.transistorsoft.tslocationmanager.R$bool
+com.transistorsoft.tslocationmanager.R$color
+com.transistorsoft.tslocationmanager.R$dimen
+com.transistorsoft.tslocationmanager.R$drawable
+com.transistorsoft.tslocationmanager.R$id
+com.transistorsoft.tslocationmanager.R$integer
+com.transistorsoft.tslocationmanager.R$layout:
+    796:796:private R$layout()
+com.transistorsoft.tslocationmanager.R$string
+com.transistorsoft.tslocationmanager.R$style
+com.transistorsoft.tslocationmanager.R$styleable
+com.transistorsoft.tslocationmanager.R$xml
+com.transistorsoft.tslocationmanager.a
 de.greenrobot.event.EventBus:
     87:87:public static de.greenrobot.event.EventBusBuilder builder()
     92:94:public static void clearCaches()
@@ -17820,7 +18231,7 @@ host.exp.exponent.LoadingView:
     45:58:public LoadingView(android.content.Context,android.util.AttributeSet)
     45:63:public LoadingView(android.content.Context,android.util.AttributeSet,int)
 host.exp.exponent.MainApplication:
-    48:48:public static okhttp3.OkHttpClient$Builder okHttpClientBuilder(okhttp3.OkHttpClient$Builder)
+    50:50:public static okhttp3.OkHttpClient$Builder okHttpClientBuilder(okhttp3.OkHttpClient$Builder)
 host.exp.exponent.Manifest
 host.exp.exponent.Manifest$permission
 host.exp.exponent.R
@@ -20939,11 +21350,61 @@ org.apache.commons.io.serialization.FullClassNameMatcher
 org.apache.commons.io.serialization.RegexpClassNameMatcher
 org.apache.commons.io.serialization.ValidatingObjectInputStream
 org.apache.commons.io.serialization.WildcardClassNameMatcher
-org.chromium.content.browser.ThreadUtils:
-    48:50:public static java.lang.Object runOnUiThreadBlockingNoException(java.util.concurrent.Callable)
-    63:68:public static java.lang.Object runOnUiThreadBlocking(java.util.concurrent.Callable)
-    96:96:public static java.util.concurrent.FutureTask runOnUiThread(java.util.concurrent.Callable)
-    125:126:public static void assertOnUiThread()
+org.greenrobot.eventbus.EventBus:
+    90:90:public static org.greenrobot.eventbus.EventBusBuilder builder()
+    95:97:public static void clearCaches()
+    268:281:public void cancelEventDelivery(java.lang.Object)
+    288:293:public void postSticky(java.lang.Object)
+    301:303:public java.lang.Object getStickyEvent(java.lang.Class)
+    312:314:public java.lang.Object removeStickyEvent(java.lang.Class)
+    323:332:public boolean removeStickyEvent(java.lang.Object)
+    339:342:public void removeAllStickyEvents()
+org.greenrobot.eventbus.EventBus$PostCallback
+org.greenrobot.eventbus.EventBusBuilder:
+    java.util.List skipMethodVerificationForClasses
+    49:50:public org.greenrobot.eventbus.EventBusBuilder logSubscriberExceptions(boolean)
+    55:56:public org.greenrobot.eventbus.EventBusBuilder logNoSubscriberMessages(boolean)
+    61:62:public org.greenrobot.eventbus.EventBusBuilder sendSubscriberExceptionEvent(boolean)
+    67:68:public org.greenrobot.eventbus.EventBusBuilder sendNoSubscriberEvent(boolean)
+    78:79:public org.greenrobot.eventbus.EventBusBuilder throwSubscriberException(boolean)
+    92:93:public org.greenrobot.eventbus.EventBusBuilder eventInheritance(boolean)
+    102:103:public org.greenrobot.eventbus.EventBusBuilder executorService(java.util.concurrent.ExecutorService)
+    112:116:public org.greenrobot.eventbus.EventBusBuilder skipMethodVerificationFor(java.lang.Class)
+    121:122:public org.greenrobot.eventbus.EventBusBuilder ignoreGeneratedIndex(boolean)
+    127:128:public org.greenrobot.eventbus.EventBusBuilder strictMethodVerification(boolean)
+    133:137:public org.greenrobot.eventbus.EventBusBuilder addIndex(org.greenrobot.eventbus.meta.SubscriberInfoIndex)
+    147:154:public org.greenrobot.eventbus.EventBus installDefaultEventBus()
+    159:159:public org.greenrobot.eventbus.EventBus build()
+org.greenrobot.eventbus.EventBusException:
+    33:34:public EventBusException(java.lang.Throwable)
+org.greenrobot.eventbus.SubscriberMethodFinder:
+    private static final int BRIDGE
+    private static final int SYNTHETIC
+    private static final int MODIFIERS_IGNORE
+    private static final int POOL_SIZE
+    188:189:static void clearCaches()
+org.greenrobot.eventbus.meta.AbstractSubscriberInfo
+org.greenrobot.eventbus.meta.SimpleSubscriberInfo
+org.greenrobot.eventbus.meta.SubscriberInfo:
+    public abstract boolean shouldCheckSuperclass()
+org.greenrobot.eventbus.meta.SubscriberMethodInfo
+org.greenrobot.eventbus.util.AsyncExecutor
+org.greenrobot.eventbus.util.AsyncExecutor$1
+org.greenrobot.eventbus.util.AsyncExecutor$Builder
+org.greenrobot.eventbus.util.AsyncExecutor$RunnableEx
+org.greenrobot.eventbus.util.ErrorDialogConfig
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory$Honeycomb
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory$Support
+org.greenrobot.eventbus.util.ErrorDialogFragments
+org.greenrobot.eventbus.util.ErrorDialogFragments$Honeycomb
+org.greenrobot.eventbus.util.ErrorDialogFragments$Support
+org.greenrobot.eventbus.util.ErrorDialogManager
+org.greenrobot.eventbus.util.ErrorDialogManager$HoneycombManagerFragment
+org.greenrobot.eventbus.util.ErrorDialogManager$SupportManagerFragment
+org.greenrobot.eventbus.util.ExceptionToResourceMapping
+org.greenrobot.eventbus.util.HasExecutionScope
+org.greenrobot.eventbus.util.ThrowableFailureEvent
 org.intellij.lang.annotations.Flow
 org.intellij.lang.annotations.Identifier
 org.intellij.lang.annotations.JdkConstants
@@ -20982,6 +21443,7 @@ org.slf4j.IMarkerFactory:
     public abstract org.slf4j.Marker getDetachedMarker(java.lang.String)
 org.slf4j.Logger:
     public static final java.lang.String ROOT_LOGGER_NAME
+    public abstract java.lang.String getName()
     public abstract boolean isTraceEnabled()
     public abstract void trace(java.lang.String)
     public abstract void trace(java.lang.String,java.lang.Object)
@@ -20995,7 +21457,9 @@ org.slf4j.Logger:
     public varargs abstract void trace(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public abstract void trace(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public abstract boolean isDebugEnabled()
-    public abstract void debug(java.lang.String,java.lang.Throwable)
+    public abstract void debug(java.lang.String,java.lang.Object)
+    public abstract void debug(java.lang.String,java.lang.Object,java.lang.Object)
+    public varargs abstract void debug(java.lang.String,java.lang.Object[])
     public abstract boolean isDebugEnabled(org.slf4j.Marker)
     public abstract void debug(org.slf4j.Marker,java.lang.String)
     public abstract void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21003,6 +21467,9 @@ org.slf4j.Logger:
     public varargs abstract void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public abstract void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public abstract boolean isInfoEnabled()
+    public abstract void info(java.lang.String,java.lang.Object)
+    public abstract void info(java.lang.String,java.lang.Object,java.lang.Object)
+    public varargs abstract void info(java.lang.String,java.lang.Object[])
     public abstract void info(java.lang.String,java.lang.Throwable)
     public abstract boolean isInfoEnabled(org.slf4j.Marker)
     public abstract void info(org.slf4j.Marker,java.lang.String)
@@ -21011,9 +21478,9 @@ org.slf4j.Logger:
     public varargs abstract void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public abstract void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public abstract boolean isWarnEnabled()
+    public abstract void warn(java.lang.String,java.lang.Object)
     public varargs abstract void warn(java.lang.String,java.lang.Object[])
     public abstract void warn(java.lang.String,java.lang.Object,java.lang.Object)
-    public abstract void warn(java.lang.String,java.lang.Throwable)
     public abstract boolean isWarnEnabled(org.slf4j.Marker)
     public abstract void warn(org.slf4j.Marker,java.lang.String)
     public abstract void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21021,6 +21488,8 @@ org.slf4j.Logger:
     public varargs abstract void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     public abstract void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     public abstract boolean isErrorEnabled()
+    public abstract void error(java.lang.String,java.lang.Object)
+    public abstract void error(java.lang.String,java.lang.Object,java.lang.Object)
     public varargs abstract void error(java.lang.String,java.lang.Object[])
     public abstract boolean isErrorEnabled(org.slf4j.Marker)
     public abstract void error(org.slf4j.Marker,java.lang.String)
@@ -21047,6 +21516,8 @@ org.slf4j.LoggerFactory:
     static final java.lang.String DETECT_LOGGER_NAME_MISMATCH_PROPERTY
     static final java.lang.String JAVA_VENDOR_PROPERTY
     120:121:static void reset()
+    383:392:public static org.slf4j.Logger getLogger(java.lang.Class)
+    396:396:private static boolean nonMatchingClasses(java.lang.Class,java.lang.Class)
 org.slf4j.MDC:
     static final java.lang.String NULL_MDCA_URL
     static final java.lang.String NO_STATIC_MDC_BINDER_URL
@@ -21077,6 +21548,7 @@ org.slf4j.MarkerFactory:
     112:112:public static org.slf4j.IMarkerFactory getIMarkerFactory()
 org.slf4j.event.EventConstants
 org.slf4j.event.EventRecodingLogger:
+    22:22:public java.lang.String getName()
     45:45:public boolean isTraceEnabled()
     49:50:public void trace(java.lang.String)
     53:54:public void trace(java.lang.String,java.lang.Object)
@@ -21090,7 +21562,9 @@ org.slf4j.event.EventRecodingLogger:
     86:88:public varargs void trace(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     91:92:public void trace(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     95:95:public boolean isDebugEnabled()
-    117:118:public void debug(java.lang.String,java.lang.Throwable)
+    103:105:public void debug(java.lang.String,java.lang.Object)
+    108:110:public void debug(java.lang.String,java.lang.Object,java.lang.Object)
+    113:114:public varargs void debug(java.lang.String,java.lang.Object[])
     121:121:public boolean isDebugEnabled(org.slf4j.Marker)
     125:126:public void debug(org.slf4j.Marker,java.lang.String)
     129:130:public void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21098,6 +21572,9 @@ org.slf4j.event.EventRecodingLogger:
     137:138:public varargs void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     141:142:public void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     145:145:public boolean isInfoEnabled()
+    153:154:public void info(java.lang.String,java.lang.Object)
+    157:158:public void info(java.lang.String,java.lang.Object,java.lang.Object)
+    161:162:public varargs void info(java.lang.String,java.lang.Object[])
     165:166:public void info(java.lang.String,java.lang.Throwable)
     169:169:public boolean isInfoEnabled(org.slf4j.Marker)
     173:174:public void info(org.slf4j.Marker,java.lang.String)
@@ -21106,9 +21583,9 @@ org.slf4j.event.EventRecodingLogger:
     185:186:public varargs void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     189:191:public void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     194:194:public boolean isWarnEnabled()
+    202:204:public void warn(java.lang.String,java.lang.Object)
     207:208:public void warn(java.lang.String,java.lang.Object,java.lang.Object)
     211:212:public varargs void warn(java.lang.String,java.lang.Object[])
-    215:216:public void warn(java.lang.String,java.lang.Throwable)
     219:219:public boolean isWarnEnabled(org.slf4j.Marker)
     223:224:public void warn(org.slf4j.Marker,java.lang.String)
     227:228:public void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21116,6 +21593,8 @@ org.slf4j.event.EventRecodingLogger:
     236:237:public varargs void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     240:241:public void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     244:244:public boolean isErrorEnabled()
+    252:254:public void error(java.lang.String,java.lang.Object)
+    257:259:public void error(java.lang.String,java.lang.Object,java.lang.Object)
     262:264:public varargs void error(java.lang.String,java.lang.Object[])
     271:271:public boolean isErrorEnabled(org.slf4j.Marker)
     275:277:public void error(org.slf4j.Marker,java.lang.String)
@@ -21135,10 +21614,8 @@ org.slf4j.event.LoggingEvent:
     public abstract long getTimeStamp()
     public abstract java.lang.Throwable getThrowable()
 org.slf4j.event.SubstituteLoggingEvent:
-    org.slf4j.Marker marker
     19:19:public org.slf4j.event.Level getLevel()
     27:27:public org.slf4j.Marker getMarker()
-    31:32:public void setMarker(org.slf4j.Marker)
     35:35:public java.lang.String getLoggerName()
     51:51:public java.lang.String getMessage()
     59:59:public java.lang.Object[] getArgumentArray()
@@ -21148,10 +21625,10 @@ org.slf4j.event.SubstituteLoggingEvent:
 org.slf4j.helpers.BasicMDCAdapter
 org.slf4j.helpers.BasicMDCAdapter$1
 org.slf4j.helpers.BasicMarker:
-    59:78:public synchronized void add(org.slf4j.Marker)
-    85:85:public boolean hasChildren()
-    98:110:public synchronized boolean remove(org.slf4j.Marker)
-    136:151:public boolean contains(java.lang.String)
+    57:71:public void add(org.slf4j.Marker)
+    78:78:public boolean hasChildren()
+    86:86:public boolean remove(org.slf4j.Marker)
+    112:127:public boolean contains(java.lang.String)
 org.slf4j.helpers.BasicMarkerFactory:
     82:85:public boolean exists(java.lang.String)
     89:92:public boolean detachMarker(java.lang.String)
@@ -21206,14 +21683,21 @@ org.slf4j.helpers.NOPLogger:
     84:84:public final varargs void trace(java.lang.String,java.lang.Object[])
     89:89:public final void trace(java.lang.String,java.lang.Throwable)
     96:96:public final boolean isDebugEnabled()
-    122:122:public final void debug(java.lang.String,java.lang.Throwable)
+    107:107:public final void debug(java.lang.String,java.lang.Object)
+    112:112:public final void debug(java.lang.String,java.lang.Object,java.lang.Object)
+    117:117:public final varargs void debug(java.lang.String,java.lang.Object[])
     130:130:public final boolean isInfoEnabled()
+    141:141:public final void info(java.lang.String,java.lang.Object)
+    146:146:public final void info(java.lang.String,java.lang.Object,java.lang.Object)
+    151:151:public final varargs void info(java.lang.String,java.lang.Object[])
     156:156:public final void info(java.lang.String,java.lang.Throwable)
     163:163:public final boolean isWarnEnabled()
+    174:174:public final void warn(java.lang.String,java.lang.Object)
     179:179:public final void warn(java.lang.String,java.lang.Object,java.lang.Object)
     184:184:public final varargs void warn(java.lang.String,java.lang.Object[])
-    189:189:public final void warn(java.lang.String,java.lang.Throwable)
     193:193:public final boolean isErrorEnabled()
+    204:204:public final void error(java.lang.String,java.lang.Object)
+    209:209:public final void error(java.lang.String,java.lang.Object,java.lang.Object)
     214:214:public final varargs void error(java.lang.String,java.lang.Object[])
 org.slf4j.helpers.NOPMDCAdapter:
     43:43:public void clear()
@@ -21235,7 +21719,9 @@ org.slf4j.helpers.SubstituteLogger:
     109:110:public varargs void trace(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     113:114:public void trace(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     117:117:public boolean isDebugEnabled()
-    137:138:public void debug(java.lang.String,java.lang.Throwable)
+    125:126:public void debug(java.lang.String,java.lang.Object)
+    129:130:public void debug(java.lang.String,java.lang.Object,java.lang.Object)
+    133:134:public varargs void debug(java.lang.String,java.lang.Object[])
     141:141:public boolean isDebugEnabled(org.slf4j.Marker)
     145:146:public void debug(org.slf4j.Marker,java.lang.String)
     149:150:public void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21243,6 +21729,9 @@ org.slf4j.helpers.SubstituteLogger:
     157:158:public varargs void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     161:162:public void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     165:165:public boolean isInfoEnabled()
+    173:174:public void info(java.lang.String,java.lang.Object)
+    177:178:public void info(java.lang.String,java.lang.Object,java.lang.Object)
+    181:182:public varargs void info(java.lang.String,java.lang.Object[])
     185:186:public void info(java.lang.String,java.lang.Throwable)
     189:189:public boolean isInfoEnabled(org.slf4j.Marker)
     193:194:public void info(org.slf4j.Marker,java.lang.String)
@@ -21251,9 +21740,9 @@ org.slf4j.helpers.SubstituteLogger:
     205:206:public varargs void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     209:210:public void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     213:213:public boolean isWarnEnabled()
+    221:222:public void warn(java.lang.String,java.lang.Object)
     225:226:public void warn(java.lang.String,java.lang.Object,java.lang.Object)
     229:230:public varargs void warn(java.lang.String,java.lang.Object[])
-    233:234:public void warn(java.lang.String,java.lang.Throwable)
     237:237:public boolean isWarnEnabled(org.slf4j.Marker)
     241:242:public void warn(org.slf4j.Marker,java.lang.String)
     245:246:public void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)
@@ -21261,6 +21750,8 @@ org.slf4j.helpers.SubstituteLogger:
     253:254:public varargs void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])
     257:258:public void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
     261:261:public boolean isErrorEnabled()
+    269:270:public void error(java.lang.String,java.lang.Object)
+    273:274:public void error(java.lang.String,java.lang.Object,java.lang.Object)
     277:278:public varargs void error(java.lang.String,java.lang.Object[])
     285:285:public boolean isErrorEnabled(org.slf4j.Marker)
     289:290:public void error(org.slf4j.Marker,java.lang.String)
@@ -21270,6 +21761,14 @@ org.slf4j.helpers.SubstituteLogger:
     305:306:public void error(org.slf4j.Marker,java.lang.String,java.lang.Throwable)
 org.slf4j.helpers.SubstituteLoggerFactory:
     61:61:public java.util.List getLoggerNames()
+org.slf4j.helpers.Util:
+    private static org.slf4j.helpers.Util$ClassContextSecurityManager SECURITY_MANAGER
+    36:37:private Util()
+    75:82:private static org.slf4j.helpers.Util$ClassContextSecurityManager getSecurityManager()
+    88:90:private static org.slf4j.helpers.Util$ClassContextSecurityManager safeCreateSecurityManager()
+    100:118:public static java.lang.Class getCallingClass()
+org.slf4j.helpers.Util$1
+org.slf4j.helpers.Util$ClassContextSecurityManager
 org.slf4j.impl.StaticLoggerBinder:
     static final java.lang.String NULL_CS_URL
     static void reset()
@@ -30159,134 +30658,3 @@ org.unimodules.interfaces.taskManager.TaskManagerUtilsInterface:
 org.unimodules.interfaces.taskManager.TaskServiceInterface
 org.webkit.androidjsc.BuildConfig
 org.webkit.androidjsc.R
-ru.andremoniy.sqlbuilder.SqlExpression:
-    public static final java.lang.String NULL
-    public static final java.lang.String SqlEnclosureOpeningBrace
-    public static final java.lang.String SqlEnclosureClosingBrace
-    public static final java.lang.String SqlConnectorAnd
-    public static final java.lang.String SqlConnectorOr
-    public static final java.lang.String SqlJoinTypeCross
-    public static final java.lang.String SqlJoinTypeInner
-    public static final java.lang.String SqlJoinTypeLeft
-    public static final java.lang.String SqlJoinTypeLeftOuter
-    public static final java.lang.String SqlJoinTypeNatural
-    public static final java.lang.String SqlJoinTypeNaturalCross
-    public static final java.lang.String SqlJoinTypeNaturalInner
-    public static final java.lang.String SqlJoinTypeNaturalLeft
-    public static final java.lang.String SqlJoinTypeNaturalLeftOuter
-    public static final java.lang.String SqlJoinTypeNone
-    public static final java.lang.String SqlOperatorAdd
-    public static final java.lang.String SqlOperatorSubtract
-    public static final java.lang.String SqlOperatorMultiply
-    public static final java.lang.String SqlOperatorDivide
-    public static final java.lang.String SqlOperatorMod
-    public static final java.lang.String SqlOperatorAnd
-    public static final java.lang.String SqlOperatorOr
-    public static final java.lang.String SqlOperatorNot
-    public static final java.lang.String SqlOperatorLessThan
-    public static final java.lang.String SqlOperatorLessThanOrEqualTo
-    public static final java.lang.String SqlOperatorGreaterThan
-    public static final java.lang.String SqlOperatorGreaterThanOrEqualTo
-    public static final java.lang.String SqlOperatorEqualTo
-    public static final java.lang.String SqlOperatorNotEqualTo
-    public static final java.lang.String SqlOperatorBitwiseAnd
-    public static final java.lang.String SqlOperatorBitwiseOr
-    public static final java.lang.String SqlOperatorBitwiseShiftLeft
-    public static final java.lang.String SqlOperatorBitwiseShiftRight
-    public static final java.lang.String SqlOperatorBitwiseNegation
-    public static final java.lang.String SqlOperatorConcatenate
-    public static final java.lang.String SqlOperatorIn
-    public static final java.lang.String SqlOperatorNotIn
-    public static final java.lang.String SqlOperatorIs
-    public static final java.lang.String SqlOperatorIsNot
-    public static final java.lang.String SqlOperatorLike
-    public static final java.lang.String SqlOperatorNotLike
-    public static final java.lang.String SqlOperatorGlob
-    public static final java.lang.String SqlOperatorNotGlob
-    public static final java.lang.String SqlOperatorBetween
-    public static final java.lang.String SqlOperatorNotBetween
-    public static final java.lang.String SqlOperatorExcept
-    public static final java.lang.String SqlOperatorIntersect
-    public static final java.lang.String SqlOperatorUnion
-    public static final java.lang.String SqlOperatorUnionAll
-    public static final java.lang.String SqlShowTypeAll
-    public static final java.lang.String SqlShowTypePermanent
-    public static final java.lang.String SqlShowTypeTemporary
-    public static final java.lang.String SqlNullsFirst
-    public static final java.lang.String SqlNullsLast
-    public static final java.lang.String SqlDefaultValueIsAutoIncremented
-    public static final java.lang.String SqlDefaultValueIsNull
-    public static final java.lang.String SqlDefaultValueIsNotNull
-    public static final java.lang.String SqlDefaultValueIsCurrentDate
-    public static final java.lang.String SqlDefaultValueIsCurrentDateTime
-    public static final java.lang.String SqlDefaultValueIsCurrentTime
-    public static final java.lang.String SqlDefaultValueIsCurrentTimestamp
-    public static final java.lang.String SqlDataTypeBigInt
-    public static final java.lang.String SqlDataTypeBlob
-    public static final java.lang.String SqlDataTypeBoolean
-    public static final java.lang.String SqlDataTypeClob
-    public static final java.lang.String SqlDataTypeDate
-    public static final java.lang.String SqlDataTypeDateTime
-    public static final java.lang.String SqlDataTypeDouble
-    public static final java.lang.String SqlDataTypeDoublePrecision
-    public static final java.lang.String SqlDataTypeFloat
-    public static final java.lang.String SqlDataTypeInt
-    public static final java.lang.String SqlDataTypeInt2
-    public static final java.lang.String SqlDataTypeInt8
-    public static final java.lang.String SqlDataTypeInteger
-    public static final java.lang.String SqlDataTypeMediumInt
-    public static final java.lang.String SqlDataTypeNumeric
-    public static final java.lang.String SqlDataTypeReal
-    public static final java.lang.String SqlDataTypeSmallInt
-    public static final java.lang.String SqlDataTypeText
-    public static final java.lang.String SqlDataTypeTimestamp
-    public static final java.lang.String SqlDataTypeTinyInt
-    public static final java.lang.String SqlDataTypeUnsignedBigInt
-    public static final java.lang.String SqlDataTypeVariant
-    138:138:static java.lang.String SqlDefaultValue(java.lang.Object)
-    141:141:static java.lang.String SqlDataTypeChar(long)
-    144:144:static java.lang.String SqlDataTypeCharacter(long)
-    147:147:static java.lang.String SqlDataTypeDecimal(long,long)
-    150:150:static java.lang.String SqlDataTypeNativeCharacter(long)
-    153:153:static java.lang.String SqlDataTypeNChar(long)
-    156:156:static java.lang.String SqlDataTypeNVarChar(long)
-    159:159:static java.lang.String SqlDataTypeVarChar(long)
-    162:162:static java.lang.String SqlDataTypeVaryingCharacter(long)
-    189:191:public SqlExpression(java.lang.String)
-    211:211:public static ru.andremoniy.sqlbuilder.SqlExpression sql(java.lang.String)
-    222:228:public static java.lang.String prepareAlias(java.lang.String)
-    256:259:public static java.lang.String prepareEnclosure(java.lang.String)
-    309:309:public static java.lang.String prepareJoinType(java.lang.String)
-    321:321:public static java.lang.String prepareOperator(java.lang.String,java.lang.String)
-ru.andremoniy.sqlbuilder.SqlSelectStatement:
-    69:70:public void distinct(java.lang.Boolean)
-    79:89:public void all(java.lang.String)
-    109:110:public void column(java.lang.Object,java.lang.String)
-    142:143:public void from(java.lang.String,java.lang.String)
-    152:153:public void join(java.lang.String)
-    163:164:public void join(java.lang.String,java.lang.String)
-    174:176:public void join(java.lang.String,java.lang.Object)
-    187:189:public void join(java.lang.String,java.lang.String,java.lang.String)
-    200:201:public void joinOn(java.lang.String,java.lang.String,java.lang.String)
-    213:232:public void joinOn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-    243:243:public void joinOn(java.lang.String,java.lang.String,java.lang.Object)
-    256:256:public void joinOn(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)
-    266:266:public void joinUsing(java.lang.String)
-    276:276:public void whereBlock(java.lang.String)
-    287:287:public void whereBlock(java.lang.String,java.lang.String)
-    299:300:public void where(java.lang.String,java.lang.String,java.lang.String)
-    312:316:public void where(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-    387:387:public void groupBy(java.lang.String)
-    397:397:public void groupByHavingBlock(java.lang.String)
-    408:408:public void groupByHavingBlock(java.lang.String,java.lang.String)
-    422:422:public void groupByHaving(java.lang.Object,java.lang.String,java.lang.Object)
-    435:435:public void groupByHaving(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)
-    447:447:public void groupByHavingValue(java.lang.Object,java.lang.String,java.lang.Object)
-    460:460:public void groupByHavingValue(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)
-    495:496:public void orderBy(java.lang.String,java.lang.String)
-    542:544:public void limit(java.lang.Integer,java.lang.Integer)
-    553:554:public void offset(java.lang.Integer)
-    565:565:public void combine(java.lang.String,java.lang.String)
-ru.andremoniy.utils.TextUtils:
-    private static final java.lang.String TAG
-    22:22:public TextUtils()
